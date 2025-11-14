@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>日帰り！痛みの少ない鼠径ヘルニア手術 ｜ MYメディカルクリニック田町三田</title>
+    <meta name="description" content="" />
+	  <link rel="icon" href="https://mymc.jp/wp2/wp-content/themes/mymc/img/cmn/favicon.ico">
+
+    <!-- googlegont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- SlickのCSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <!-- jQueryとSlickのJS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <!-- カレンダー用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <main>
+      <section id="form" class="normal">
+        <h2><span>ご予約フォーム</span></h2>
+        <div class="title_en">CONTACT</div>
+        <form action="./confirm.php" method="post" class="inner">
+          <div class="formpart">
+            <div class="formname">
+              <div>お名前</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput">
+              <input type="text" name="fullname" placeholder="山田太郎" required>
+            </div>
+          </div>
+          <div class="formpart">
+            <div class="formname">
+              <div>電話番号</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput">
+              <input type="tel" name="tel" placeholder="09012345678" required>
+            </div>
+          </div>
+          <div class="formpart">
+            <div class="formname">
+              <div>メールアドレス</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput">
+              <input type="email" name="mail" placeholder="example@mymc.jp" required>
+              <p>
+                ※gmail、yahoo メール等のアドレスを推奨させていただいております。<br>
+                ※icloud メールの場合、正常に受信ができない場合がございます。迷惑メールフォルダをご確認いただき、迷惑メールでないと設定をお願いいたします。
+              </p>
+            </div>
+          </div>
+          <div class="formpart">
+            <div class="formname">
+              <div>生年月日</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput">
+              <input type="text" name="birth" placeholder="1980/06/15" class="birth" required>
+            </div>
+          </div>
+          <div class="formpart">
+            <div class="formname">
+              <div>ご予約希望日時　(第１希望)</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput hope">
+              <input type="text" name="hopeday1" placeholder="日付を選択" class="hopeday" required>
+              <select name="hopetime1" required>
+                <option value="" selected disabled>時間を選択</option>
+                <option value="8:30~">8:30~</option>
+                <option value="9:00~">9:00~</option>
+                <option value="9:30~">9:30~</option>
+                <option value="10:00~">10:00~</option>
+                <option value="10:30~">10:30~</option>
+                <option value="11:00~">11:00~</option>
+                <option value="11:30~">11:30~</option>
+                <option value="12:00~">12:00~</option>
+                <option value="13:30~">13:30~</option>
+                <option value="14:00~">14:00~</option>
+                <option value="14:30~">14:30~</option>
+                <option value="15:00~">15:00~</option>
+                <option value="15:30~">15:30~</option>
+                <option value="16:00~">16:00~</option>
+                <option value="18:00~">18:00~</option>
+                <option value="18:30~">18:30~</option>
+                <option value="19:00~">19:00~</option>
+                <option value="19:30~">19:30~</option>
+              </select>
+            </div>
+            <div class="formname">
+              <div>ご予約希望日時　(第２希望)</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput hope">
+              <input type="text" name="hopeday2" placeholder="日付を選択" class="hopeday" required>
+              <select name="hopetime2" required>
+                <option value="" selected disabled>時間を選択</option>
+                <option value="8:30~">8:30~</option>
+                <option value="9:00~">9:00~</option>
+                <option value="9:30~">9:30~</option>
+                <option value="10:00~">10:00~</option>
+                <option value="10:30~">10:30~</option>
+                <option value="11:00~">11:00~</option>
+                <option value="11:30~">11:30~</option>
+                <option value="12:00~">12:00~</option>
+                <option value="13:30~">13:30~</option>
+                <option value="14:00~">14:00~</option>
+                <option value="14:30~">14:30~</option>
+                <option value="15:00~">15:00~</option>
+                <option value="15:30~">15:30~</option>
+                <option value="16:00~">16:00~</option>
+                <option value="18:00~">18:00~</option>
+                <option value="18:30~">18:30~</option>
+                <option value="19:00~">19:00~</option>
+                <option value="19:30~">19:30~</option>
+              </select>
+            </div>
+            <div class="formname">
+              <div>ご予約希望日時　(第３希望)</div>
+              <div class="require">必須</div>
+            </div>
+            <div class="forminput hope">
+              <input type="text" name="hopeday3" placeholder="日付を選択" class="hopeday" required>
+              <select name="hopetime3" required>
+                <option value="" selected disabled>時間を選択</option>
+                <option value="8:30~">8:30~</option>
+                <option value="9:00~">9:00~</option>
+                <option value="9:30~">9:30~</option>
+                <option value="10:00~">10:00~</option>
+                <option value="10:30~">10:30~</option>
+                <option value="11:00~">11:00~</option>
+                <option value="11:30~">11:30~</option>
+                <option value="12:00~">12:00~</option>
+                <option value="13:30~">13:30~</option>
+                <option value="14:00~">14:00~</option>
+                <option value="14:30~">14:30~</option>
+                <option value="15:00~">15:00~</option>
+                <option value="15:30~">15:30~</option>
+                <option value="16:00~">16:00~</option>
+                <option value="18:00~">18:00~</option>
+                <option value="18:30~">18:30~</option>
+                <option value="19:00~">19:00~</option>
+                <option value="19:30~">19:30~</option>
+              </select>
+              <p>
+                ※日曜日・祝日は休診日でございます。<br>
+                ※土曜日は16時が最終受付でございます。
+              </p>
+            </div>
+          </div>
+          <div class="formpart" style="border-bottom: none;">
+            <div class="formname">
+              <div>備考</div>
+            </div>
+            <div class="forminput">
+              <textarea name="other" placeholder="ご質問・ご要望などがございましたらご記入ください。"></textarea>
+            </div>
+          </div>
+          <p>
+            ご予約は確定ではありません。<br>ご予約確定につきましては、<br class="sponly">追ってご連絡差し上げます。
+          </p>
+          <div class="policy">
+            <label for="agree"><input type="checkbox" id="agree" required><a href="https://mymc.jp/privacypolicy/" target="_blank">プライバシーポリシー</a>に同意する</label>
+          </div>
+          <input type="submit" value="入力内容のご確認">
+        </form>
+      </section>
+    </main>
+    <footer>
+      Copyright © mymedical clinic.
+    </footer>
+    <!-- js -->
+    <script>
+      // ハンバーガーメニュー
+      document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".menu");
+        const openMenu = document.querySelector(".open-menu");
+        const closeButton = document.querySelector(".close");
+        const menuLinks = document.querySelectorAll(".open-menu a");
+        // メニューを開く
+        menu.addEventListener("click", function () {
+          openMenu.style.display = "block";
+          setTimeout(() => {
+            openMenu.classList.add("active");
+          }, 10); // 少し遅らせることでCSSのtransitionが適用される
+        });
+        // メニューを閉じる
+        function closeMenu() {
+          openMenu.classList.remove("active");
+          setTimeout(() => {
+            openMenu.style.display = "none";
+          }, 500); // transition時間と合わせる
+        }
+        closeButton.addEventListener("click", closeMenu);
+        menuLinks.forEach(link => link.addEventListener("click", closeMenu));
+      });
+      
+      //医師の高さを合わせる
+      document.addEventListener("DOMContentLoaded", function () {
+        function adjustCareerHeight() {
+          const careers = document.querySelectorAll("#doctor ul li .desc .career");
+          if (window.innerWidth >= 769) {
+            if (careers.length === 0) return;
+            let maxHeight = 0;
+            careers.forEach(career => {
+              let height = career.offsetHeight;
+              if (height > maxHeight) {
+                maxHeight = height;
+              }
+            });
+            careers.forEach(career => {
+              career.style.height = maxHeight + "px";
+            });
+          } else {
+            // 768px以下なら高さをリセット
+            careers.forEach(career => {
+              career.style.height = "auto";
+            });
+          }
+        }
+        // 初回実行
+        adjustCareerHeight();
+        // 画面リサイズ時に高さを調整
+        window.addEventListener("resize", adjustCareerHeight);
+      });
+      
+      // すべての #flow .flowpart の高さを最も高いものに統一
+      document.addEventListener("DOMContentLoaded", function () {
+        function adjustFlowHeights() {
+          const flowparts = document.querySelectorAll("#flow .flowpart");
+          if (flowparts.length === 0) return;
+          // 高さをリセット（リサイズ時の高さ崩れを防ぐ）
+          flowparts.forEach(flowpart => {
+            flowpart.style.height = "auto";
+          });
+          // 最大の高さを取得
+          let maxHeight = 0;
+          flowparts.forEach(flowpart => {
+            let height = flowpart.getBoundingClientRect().height; // 正確な高さを取得
+            if (height > maxHeight) {
+              maxHeight = height;
+            }
+          });
+          // すべての .flowpart の高さを最大値に統一
+          flowparts.forEach(flowpart => {
+            flowpart.style.height = maxHeight + "px";
+          });
+        }
+        // 画像やフォントの読み込みを考慮して少し遅延させる
+        setTimeout(adjustFlowHeights, 500);
+        // 画面リサイズ時にも高さを調整
+        window.addEventListener("resize", adjustFlowHeights);
+      });
+
+      // アコーディオン
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".qa li h3").forEach(h3 => {
+          h3.addEventListener("click", function () {
+            this.parentElement.classList.toggle("open");
+          });
+        });
+      });
+      
+      //流れのスライダー
+      $(document).ready(function(){
+        $('#flow-slider').slick({
+          slidesToShow: 4, // 3.5にして両端を少し見せる
+          slidesToScroll: 1, 
+          dots: true, 
+          arrows: true, 
+          infinite: true, 
+          autoplay: true, 
+          autoplaySpeed: 3000, 
+          prevArrow: '<button class="slick-prev"></button>',
+          nextArrow: '<button class="slick-next"></button>',
+          centerMode: false, // ここはOFFにする
+        });
+        // 5個目以降のドットを非表示にする
+        $('#flow #flow-slider .slick-dots li').each(function(index) {
+          if (index >= 4) { // 5個目 (index=4) 以降を非表示
+            $(this).hide();
+          }
+        });
+        // スライドが変わったときに適切なドットをアクティブにする
+        $('#flow-slider').on('afterChange', function(event, slick, currentSlide){
+          let activeDotIndex = currentSlide >= 4 ? currentSlide - 4 : currentSlide;
+          $('#flow #flow-slider .slick-dots li').removeClass('slick-active');
+          $('#flow #flow-slider .slick-dots li').eq(activeDotIndex).addClass('slick-active');
+        });
+      });
+
+      // 流れのスライダー(SP)
+      $(document).ready(function(){
+        $('#flow-slider2').slick({
+          dots: true,
+          arrows: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: '<button class="slick-prev"></button>',
+          nextArrow: '<button class="slick-next"></button>',
+          centerMode: false,
+        });
+      });
+
+      // アクセスのスライダー
+      $(document).ready(function(){
+        $('#access-slider').slick({
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        });
+      });
+
+      // 生年月日のスクリプト
+      document.addEventListener('DOMContentLoaded', function() {
+        flatpickr('.birth', {
+          dateFormat: 'Y/m/d', // 日付フォーマットを設定
+          defaultDate: new Date().setFullYear(new Date().getFullYear() - 30), // 今日から30年前の日付をデフォルトに設定
+          minDate: '1924-01-01', // 選択可能な最小日付を設定
+          maxDate: 'today', // 今日までの日付を選択可能に設定
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['日', '月', '火', '水', '木', '金', '土'],
+              longhand: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
+            },
+            months: {
+              shorthand: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+              longhand: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            },
+            ordinal: function() {
+              return "日";
+            }
+          }
+        });
+      });
+
+      // 希望日のスクリプト
+      document.addEventListener('DOMContentLoaded', function() {
+        flatpickr('.hopeday', {
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['日', '月', '火', '水', '木', '金', '土'],
+              longhand: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
+            },
+            months: {
+              shorthand: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+              longhand: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            },
+            ordinal: function() {
+              return "日";
+            }
+          },
+          dateFormat: 'Y/m/d', // 日付フォーマットを設定
+          minDate: 'today', // 選択可能な最小日付を設定
+          disable: [
+            function(date) {
+              // Disable all Sundays
+              return (date.getDay() === 0);
+            },
+            "2024-09-16",
+            "2024-09-23",
+            "2024-10-14",
+            "2024-11-04",
+            "2025-01-13",
+            "2025-02-11",
+            "2024-02-24",
+            "2024-03-20"
+          ]
+        });
+      });
+    </script>
+</body>
+</html>
