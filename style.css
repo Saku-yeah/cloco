@@ -62,8 +62,6 @@ ul, ol {
     }
 }
 
-
-
 /* ハンバーガーメニュー (SPでは非表示) */
 .open-menu {
     position: fixed;
@@ -83,3 +81,4 @@ ul, ol {
     display: none;
     opacity: 1;
 }
+
