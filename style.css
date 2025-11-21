@@ -1,84 +1,1487 @@
-/*
- * Google Fonts: Noto Sans JP
- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 /* --- リセットと基本設定 --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
 }
-
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f7f7f7;
-    -webkit-text-size-adjust: 100%; /* Safari対策 */
+img{
+  display: block;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.3s;
+ul,li{
+  list-style: none !important;
 }
-
 a:hover {
     opacity: 0.8;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
+/* ---  ヘッダー用 --- */
+header{
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 1000;
+}
+header .pconly{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  max-width: 1800px;
+  padding-top: 10px;
+}
+header .pconly .logo{
+  display: block;
+}
+header .pconly .logo img{
+  height: 60px;
+}
+header .pconly .btn{
+  display: block;
+}
+header .pconly .btn img{
+  height: 60px;
+}
+header .pconly ul{
+  display: flex;
+  justify-content: center;
+}
+header .pconly ul li{
+  text-align: center;
+  font-size: 12px;
+  padding: 0 12px;
+  border-right: 1px solid;
+  font-weight: bold;
+}
+header .pconly ul li.top{
+  padding-top: 6px;
+}
+header .pconly ul li a{
+  color: #71513e;
+  text-decoration: none;
+}
+header .pconly ul .tate{
+  border-left: 1px solid #71513e;
 }
 
-ul, ol {
-    list-style: none;
+/* ---FV用--- */
+#fv{
+  margin-top: 80px;
+}
+#fv h1{
+  position: relative;
+}
+#fv h1 > img{
+  width: 100%;
 }
 
-.inner{
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 0 20px;
+#fv h1 .fvcta .text1{
+  width: 85%;
+  margin: 0 auto 15px;
+}
+#fv h1 .fvcta .text2{
+  width: 50%;
+  margin-left: auto;
+  margin-top: 10px;
+}
+#fv h1 .fvcta .box{
+  display: flex;
+  justify-content: space-between;
+}
+#fv h1 .fvcta .box a{
+  display: block;
+  width: 49%;
+}
+#fv h1 .fvcta .box a img{
+  width: 100%;
+}
+.fvctabox{
+  background-color: #af9e93;
+  padding: 20px;
+}
+#fv h1 .fvcta{
+  background: white;
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px auto;
 }
 
-/* --- 共通レイアウトとユーティリティ --- */
-.normal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
+/* --- セクション用 --- */
+section.normal{
+  padding: 60px 0;
+}
+section.normal h2{
+  font-family: serif;
+  text-align: center;
+  font-size: 24px;
+}
+section.normal h2 span{
+  font-size: 36px;
+  font-family: serif;
+}
+section.normal .title_en{
+  text-align: center;
+  color: #71513e;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: auto;
+}
+section .inner{
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+}
+section.normal h3{
+  text-align: center;
+  font-family: serif;
+  color: #71513e;
+  font-size: 24px;
+  font-family: serif;
+  margin-bottom: 20px;
+}
+section.normal h3 span{
+  font-size: 36px;
+  font-family: serif;
 }
 
-/* PC/SP表示の切り替え */
-.pconly { display: block; }
-.sponly { display: none; }
-@media (max-width: 768px) {
-    .pconly { display: none; }
-    .sponly { display: block; }
-    .normal {
-        padding: 40px 15px;
-    }
+/* --- 背景色 --- */
+#about, #feature, #price, #access, #form {
+    background: #f8f6f5; /* 薄いグレーの背景色 */
 }
 
-/* ハンバーガーメニュー (SPでは非表示) */
-.open-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    z-index: 101;
-    display: block; /* 初期状態では非表示 */
-    opacity: 0;
-    transition: opacity 0.5s;
-    overflow-y: auto;
+/* --- CTA用--- */
+.cta {
+    background: #af9e93; /* 茶色系の背景 */
+    padding: 40px 0;
+    text-align: center;
 }
-.open-menu.active {
+.cta .box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+}
+.cta .box .p-midashi{
+  text-align: center;
+  font-family: serif;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.cta .box .p-midashi span{
+  font-size: 38px;
+  position: relative;
+  top: 3px;
+  font-family: serif;
+}
+.cta .box .cta-box{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.cta .box .cta-box a{
+  display: block;
+  width: 49%;
+}
+.cta .box .cta-box a img{
+  width: 100%;
+}
+.cta .box .chui{
+  text-align: right;
+  font-size: 14px;
+}
+
+/* --- about用 --- */
+#about .eachworry{
+  margin-bottom: 60px;
+}
+#about .eachworry .worrybox{
+  background: url(./img/worry-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#about .eachworry .worrybox img{
+  width: 30%;
+}
+#about .eachworry .worrybox ul{
+  width: 65%;
+}
+#about .eachworry .worrybox ul li{
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 2;
+  padding-left: 35px;
+  font-weight: bold;
+}
+#about .eachworry .worrybox ul li span{
+  color: #ff8c00;
+}
+#about .eachworry .worrybox ul li::before{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url(./img/check.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 7px;
+}
+#about .eachworry .worrybox img.person{
+  position: absolute;
+  width: 20%;
+  right: -10%;
+  bottom: -10%;
+}
+#about .eachworry .aboutbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#about .eachworry .aboutbox .text{
+  width: 51%;
+}
+#about .eachworry .aboutbox .text .big{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#about .eachworry .aboutbox .text .big span{
+  color: #ff8c00;
+  text-decoration: underline;
+}
+#about .eachworry .aboutbox .text .small{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+#about .eachworry .aboutbox .text .small span{
+  background: #f9f4c7;
+}
+#about .eachworry .aboutbox img{
+  width: 47%;
+}
+#about .eachworry.type{
+  margin-bottom: 0;
+}
+#about .eachworry.type > p{
+  text-align: center;
+  font-size: 16px;
+  margin: -10px 0 20px;
+}
+#about .eachworry.type ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#about .eachworry.type ul li{
+  background: #ffffff;
+  width: 30%;
+  border-radius: 10px;
+  padding: 30px 10px;
+}
+#about .eachworry.type ul li h4{
+  height: 80px;
+  display: table;
+  width: 100%;
+}
+#about .eachworry.type ul li h4 div{
+  text-align: center;
+  line-height: 2;
+  font-size: 18px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#about .eachworry.type ul li h4 div span{
+  color: #ff8c00;
+}
+#about .eachworry.type ul li img{
+  width: 80%;
+  margin: 20px auto;
+}
+#about .eachworry.type ul li p{
+  font-size: 14px;
+  line-height: 2;
+}
+#about .eachworry.type ul li p span{
+  background: #f9f4c7;
+}
+
+/* --- method用 --- */
+#method .eachmethod{
+  margin-bottom: 60px;
+}
+#method .eachmethod .method1{
+  background: url(./img/worry-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#method .eachmethod .method1 img.method{
+  width: 30%;
+}
+#about .eachworry .worrybox ul{
+  width: 65%;
+}
+#about .eachworry .worrybox ul li{
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 2;
+  padding-left: 35px;
+  font-weight: bold;
+}
+#about .eachworry .worrybox ul li span{
+  color: #ff8c00;
+}
+#about .eachworry .worrybox ul li::before{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url(./img/check.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 7px;
+}
+#about .eachworry .worrybox img.person{
+  position: absolute;
+  width: 20%;
+  right: -10%;
+  bottom: -10%;
+}
+#about .eachworry .aboutbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#about .eachworry .aboutbox .text{
+  width: 51%;
+}
+#about .eachworry .aboutbox .text .big{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#about .eachworry .aboutbox .text .big span{
+  color: #ff8c00;
+  text-decoration: underline;
+}
+#about .eachworry .aboutbox .text .small{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+#about .eachworry .aboutbox .text .small span{
+  background: #f9f4c7;
+}
+#about .eachworry .aboutbox img{
+  width: 47%;
+}
+#about .eachworry.type{
+  margin-bottom: 0;
+}
+#about .eachworry.type > p{
+  text-align: center;
+  font-size: 16px;
+  margin: -10px 0 20px;
+}
+#about .eachworry.type ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#about .eachworry.type ul li{
+  background: #ffffff;
+  width: 30%;
+  border-radius: 10px;
+  padding: 30px 10px;
+}
+#about .eachworry.type ul li h4{
+  height: 80px;
+  display: table;
+  width: 100%;
+}
+#about .eachworry.type ul li h4 div{
+  text-align: center;
+  line-height: 2;
+  font-size: 18px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#about .eachworry.type ul li h4 div span{
+  color: #ff8c00;
+}
+#about .eachworry.type ul li img{
+  width: 80%;
+  margin: 20px auto;
+}
+#about .eachworry.type ul li p{
+  font-size: 14px;
+  line-height: 2;
+}
+#about .eachworry.type ul li p span{
+  background: #f9f4c7;
+}
+
+/* --- method用 --- */
+#method .eachmethod{
+  margin-bottom: 60px;
+}
+#method .eachmethod .methodr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#method .eachmethod .methodr .text{
+  width: 50%;
+}
+#method .eachmethod .methodr .text .big{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#method .eachmethod .methodr .text .big span{
+  color: #ff8c00;
+  text-decoration: underline;
+}
+#method .eachmethod .methodr .text .small{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+#method .eachmethod .methodr .text .small.mt0{
+  margin-top: 0;
+}
+#method .eachmethod .methodr .text .small span{
+  background: #f9f4c7;
+}
+#method .eachmethod .methodr img{
+  width: 45%;
+}
+#method .eachmethod .brown{
+  background: #71513e;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+#method .eachmethod .text{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+}
+#method .eachmethod .text span{
+    background: #f9f4c7;
+}
+/*  */
+#method .eachmethod .methodl .image{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#method .eachmethod .methodl .image img{
+  width: 45%;
+}
+#method .eachmethod .methodl .image .arrow{
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  width: 30px;
+  height: 30px;
+  background: #71513e;
+}
+#method .eachmethod .methodl p{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+#method .eachmethod .methodl p span{
+  background: #f9f4c7;
+}
+
+/* --- features用 --- */
+#features > p{
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+#features ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 2%;
+  margin-top: 30px;
+}
+#features ul li{
+  width: 32%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#features ul li .head{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  margin: 20px auto 10px;
+  column-gap: 10px;
+}
+#features ul li .head .number{
+  font-size: 32px;
+  font-family: serif;
+  background: #7e614f;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+#features ul li .head h4{
+  display: table;
+  height: 60px;
+}
+#features ul li .head h4 div{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #7e614f;
+}
+#features ul li img{
+  width: 90%;
+  margin: 0 auto 10px;
+  height: 150px;
+  object-fit: cover;
+}
+#features ul li p{
+  font-size: 14px;
+  line-height: 2;
+  width: 90%;
+  margin: 0 auto 10px;
+}
+#features ul li p span{
+  background: #f9f4c7;
+}
+#features .brown{
+  background: #71513e;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+/* --- doctors用 --- */
+#doctors ul{
+  width: 90%;
+  max-width: 1200px;
+  gap: 16px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#doctors ul li{
+  width: 18%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#doctors ul li .image{
+  padding: 20px 0;
+}
+#doctors ul li .image img{
+  width: 50%;
+  margin: auto;
+}
+#doctors ul li .desc{
+  background: #dad1cd;
+  padding: 10px;
+}
+#doctors ul li .desc .name{
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#doctors ul li .desc .name span{
+  color: white;
+  background: #71513e;
+  padding: 4px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+#doctors ul li .desc .career{
+  background: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+#doctors ul li .desc .tit{
+  margin: 5px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid;
+  color: #71513e;
+}
+#doctors ul li .desc .content.small{
+  font-size: 11px;
+}
+#doctors .brown{
+  background: #71513e;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px 0;
+  margin: 30px 0;
+}
+#doctors .masuibox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#doctors .masuibox img{
+  width: 49%;
+}
+#doctors .masuibox .text{
+  width: 49%;
+}
+#doctors .masuibox .text .big{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #ff8c00;
+  text-decoration: underline;
+}
+#doctors .masuibox .text .small{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* --- price用 --- */
+#price table{
+  border-collapse: collapse;
+}
+#price table th{
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0;
+}
+#price table th.futan1{
+  background: #e8e3e0;
+}
+#price table th.futan2{
+  background: #d9d0cb;
+}
+#price table th.futan3{
+  background: #c5b8b0;
+}
+#price table th.midashi{
+  color: white;
+  background: #71513e;
+  border: 1px solid #60493b;
+}
+#price table td{
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #cacaca;
+}
+#price table td span{
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* --- flow用 --- */
+#flow > p{
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+#flow #flow-slider{
+  margin-top: 40px;
+  width: 100%;
+}
+#flow .flowpart{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  margin: 10px;
+}
+#flow .flowpart h4{
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+#flow .flowpart h4 span{
+  color: #71513e;
+  font-family: serif;
+  font-size: 36px;
+  position: relative;
+  top: 5px;
+  margin-right: 8px;
+}
+#flow .flowpart > img{
+  width: 90%;
+  margin: auto;
+}
+#flow .flowpart p{
+  width: 90%;
+  margin: 20px auto 0;
+  font-size: 14px;
+  line-height: 2;
+}
+#flow .flowpart p span{
+  background: #f9f4c7;
+}
+#flow .flowpart p a{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+#flow .flowpart p a img{
+  width: 100%;
+}
+#flow  #flow-slider .slick-list {
+  padding: 0 !important;
+}
+#flow  #flow-slider .slick-track {
+  display: flex;
+}
+#flow  #flow-slider .slick-prev, 
+#flow  #flow-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  cursor: pointer;
+}
+#flow  #flow-slider .slick-prev {
+  background: url('./img/left.png') no-repeat center;
+  left: 25%;
+  background-size: contain;
+}
+#flow  #flow-slider .slick-next {
+  background: url('./img/right.png') no-repeat center;
+  right: 25%;
+  background-size: contain;
+}
+#flow  #flow-slider .slick-prev::before,
+#flow  #flow-slider .slick-next::before {
+  display: none;
+}
+#flow  #flow-slider .slick-dots{
+  bottom: -40px;
+}
+#flow  #flow-slider .slick-dots li{
+  margin: 0 10px;
+}
+#flow  #flow-slider .slick-dots li button:before{
+  font-size: 15px;
+}
+
+/* --- access用 --- */
+#access .accessbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#access .accessbox #access-slider{
+  width: 55%;
+}
+#access .accessbox #access-slider .accesspart img{
+  width: 100%;
+}
+#access .accessbox #access-slider .slick-dots li button:before{
+  font-size: 10px;
+  top: 5px;
+}
+#access .accessbox .desc{
+  width: 40%;
+}
+#access .accessbox .desc li{
+  margin-bottom: 15px;
+}
+#access .accessbox .desc li h4{
+  color: white;
+  background: #71513e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  column-gap: 5px;
+  width: 7em;
+  padding: 4px 0;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+#access .accessbox .desc li h4 img{
+  height: 20px;
+  object-fit: contain;
+}
+#access .accessbox .desc li p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+#access .accessbox .desc li table{
+  font-size: 14px;
+  text-align: center;
+  border-collapse: collapse;
+}
+#access .accessbox .desc li table th,
+#access .accessbox .desc li table td{
+  font-family: system-ui;
+  border-bottom: 1px solid black;
+  padding: 4px 12px;
+}
+#access .accessbox .desc li table td.maru{
+  color: #ffab00;
+}
+#access .accessbox .desc li table .last th,
+#access .accessbox .desc li table .last td{
+  border-bottom: none;
+}
+
+/* --- qa用 --- */
+#qa ul li{
+  margin-bottom: 15px;
+}
+#qa ul li h3{
+  position: relative;
+  text-align: left;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: normal;
+  border: 1px solid #c7bbb4;
+  color: black;
+  border-radius: 10px;
+  padding: 20px 25px;
+  cursor: pointer;
+  margin: 0;
+}
+#qa ul li h3 img{
+  position: absolute;
+  width: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#qa ul li p{
+  display: none;
+  font-size: 14px;
+  line-height: 2;
+  padding: 20px 30px;
+}
+#qa ul li.open p{
+  display: block;
+}
+#qa ul li.open img{
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/*---form用---*/
+#form form{
+  background: white;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+#form form .formpart{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#form form .formpart .formname{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  align-items: center;
+  position: relative;
+  top: 5px;
+}
+#form form .formpart .formname .require{
+  background: #71513e;
+  color: white;
+  width: 3em;
+  text-align: center;
+  padding: 4px 0;
+}
+#form form .formpart .forminput{
+  width: 55%;
+}
+#form form .formpart .forminput input,
+#form form .formpart .forminput textarea,
+#form form .formpart .forminput select{
+  width: 95%;
+  font-size: 16px;
+  padding: 8px;
+  font-family: ui-monospace;
+}
+#form form .formpart .forminput textarea{
+  height: 6em;
+}
+#form form .formpart .forminput > p{
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 15px;
+  width: 100%;
+}
+#form form .formpart .forminput.hope{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#form form .formpart .forminput.hope input,
+#form form .formpart .forminput.hope select{
+  width: 47%;
+}
+#form form > p{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+#form form .policy{
+  text-align: center;
+  margin: 30px 0;
+  font-size: 20px;
+}
+#form form .policy input{
+  transform: scale(1.5);
+  margin-right: 1em;
+}
+#form form input[type="submit"]{
+  cursor: pointer;
+  text-align: center;
+  width: 10em;
+  display: block;
+  margin: 20px auto;
+  font-size: 24px;
+  padding: 15px 0;
+  color: white;
+  background: #71513e;
+  border: 1px solid #71513e;
+}
+#form form input[type="submit"]:hover{
+  color: #71513e;
+  background: white;
+}
+
+/* footer用 */
+footer{
+  background: #71513e;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 0;
+  font-family: none;
+}
+/* --- スマホ用 --- */
+@media (max-width: 768px){
+  .pconly{
+    display: none !important;
+  }
+  header{
+    height: 60px;
+  }
+  header .sponly{
+    position: relative;
+  }
+  header .sponly > a{
+    display: block;
+    width: 170px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  header .sponly > a img{
+    height: 40px;
+  }
+  header .sponly .menu{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }
+  header .sponly .menu .bar{
+    width: 40px;
+    height: 3px;
+    background: #71513e;
+    margin: 8px 0;
+    border-radius: 20px;
+  }
+  header .sponly .open-menu{
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    background: rgba(252, 252, 251, 0.97);
+    width: 65%;
+    padding: 0 0 20px;
+    max-width: 300px;
+  }
+  header .sponly .open-menu.active {
+    display: block;
     opacity: 1;
+  }
+  header .sponly .open-menu ul{
+    position: relative;
+  }
+  header .sponly .open-menu ul .close{
+    position: absolute;
+    font-size: 45px;
+    top: -60px;
+    right: 30px;
+    width: 40px;
+    background: #ffffff;
+    height: 50px;
+    color: #71513e;
+  }
+  header .sponly .open-menu li{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #c8bdb5;
+    width: 80%;
+    margin: auto;
+  }
+  header .sponly .open-menu li a{
+    font-family: serif;
+    color: #71513e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .sp-cta{
+    margin: 30px auto;
+  }
+  .sp-cta a{
+    display: block;
+    width: 100%;
+  }
+  .sp-cta a img{
+    width: 100%;
+  }
+  #fv{
+    margin-top: 60px;
+  }
+  .first-cta{
+    padding: 20px 0;
+  }
+  .first-cta .inner{
+    border: 2px solid #71513e;
+    border-radius: 10px;
+  }
+  .first-cta .inner .p-midashi{
+    text-align: center;
+    color: #71513e;
+    font-family: serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .first-cta .inner .p-midashi span{
+    font-family: serif;
+    font-size: 28px;
+    margin: 0 4px;
+    position: relative;
+    top: 2px;
+  }
+  .first-cta .inner a{
+    width: 90%;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .first-cta .inner a img{
+    width: 100%;
+  }
+  .first-cta .inner .chui{
+    text-align: center;
+    font-size: 14px;
+    color: #725340;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  section.normal{
+    padding: 30px 0;
+  }
+  section .inner{
+    max-width: 450px;
+  }
+  section.normal h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  section.normal h3 span{
+    font-size: 28px;
+  }
+  #about .eachworry{
+    margin-bottom: 20px;
+  }
+  #about .eachworry .worrybox{
+    padding: 10px;
+    margin-bottom: 120px;
+  }
+  #about .eachworry .worrybox img.worry{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #about .eachworry .worrybox ul{
+    width: 100%;
+  }
+  #about .eachworry .worrybox ul li::before{
+    width: 22px;
+    height: 22px;
+  }
+  #about .eachworry .worrybox img.person{
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18%;
+  }
+  #about .eachworry .aboutbox .text{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #about .eachworry .aboutbox img{
+    width: 100%;
+  }
+  #about .eachworry.type > p{
+    text-align: left;
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+  #about .eachworry.type ul li{
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+  #about .eachworry.type ul li h4 div{
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  #method .eachmethod .method1 img{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #method .eachmethod .method1 .text{
+    width: 100%;
+  }
+  #method .eachmethod .brown{
+    padding: 10px;
+    text-align: left;
+  }
+  #method .eachmethod .brown br{
+    display: none;
+  }
+  #method .eachmethod.method4 ul{
+    padding-left: 15px;
+  }
+  #method .eachmethod.sponly img{
+    width: 100%;
+  }
+  #method .eachmethod.sponly .waku{
+    border: 1px solid #c6ece6;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  #features > p{
+    text-align: left;
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+  }
+  #features > p br{
+    display: none;
+  }
+  #features ul li{
+    width: 100%;
+  }
+  #doctors ul{
+    max-width: 450px;
+  }
+  #doctors ul li{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #doctors ul li .desc .name{
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  #doctors ul li .desc .career{
+    font-size: 16px;
+  }
+  #doctors ul li .desc .content.small{
+    font-size: 14px;
+  }
+  #doctors .masuibox{
+    flex-wrap: wrap;
+  }
+  #doctors .masuibox img{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #doctors .masuibox .text{
+    width: 100%;
+  }
+  #price table{
+    margin-bottom: 20px;
+  }
+  #flow > p{
+    text-align: left;
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+    font-size: 16px;
+  }
+  #flow #flow-slider2{
+    width: 90%;
+    margin: 40px auto;
+    max-width: 450px;
+  }
+  #flow #flow-slider2 .slick-prev, 
+  #flow #flow-slider2 .slick-next {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  #flow #flow-slider2 .slick-prev {
+    background: url('./img/left.png') no-repeat center;
+    left: -2%;
+    background-size: contain;
+  }
+  #flow #flow-slider2 .slick-next {
+    background: url('./img/right.png') no-repeat center;
+    right: -2%;
+    background-size: contain;
+  }
+  #flow  #flow-slider2 .slick-prev::before, 
+  #flow  #flow-slider2 .slick-next::before {
+    display: none;
+  }
+  #access .accessbox #access-slider .slick-dots li button:before{
+    font-size: 6px;
+  }
+  #access .accessbox #access-slider{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #access .accessbox .desc{
+    width: 100%;
+  }
+  #access .accessbox .desc li table th,
+  #access .accessbox .desc li table td{
+    padding: 4px 8px;
+  }
+  #qa ul li h3{
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 10px 35px;
+    line-height: 1.5;
+  }
+  #qa ul li h3 img{
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 10px;
+  }
+  #qa ul li.open img{
+    transform: translateX(-50%) rotate(180deg);
+  }
+  #qa ul li p{
+    padding: 10px;
+  }
+  #form form{
+    padding: 30px 20px;
+    width: 80%;
+  }
+  #form form .formpart .formname{
+    width: 100%;
+    margin-bottom: 15px;
+    position: static;
+    justify-content: flex-start;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  #form form .formpart .forminput{
+    width: 100%;
+  }
+  #form form .formpart .forminput.hope input,
+  #form form .formpart .forminput.hope select{
+    width: 46%;
+  }
+  #form form > p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: -20px;
+  }
+  #form form .policy{
+    font-size: 16px;
+  }
+  #form form .policy input{
+    transform: scale(1.2);
+    margin-right: 0.5em;
+  }
 }
 
+@media (min-width: 769px){
+  .sponly{
+    display: none !important;
+  }
+}
+
+#confirm{
+  margin-top: 80px;
+}
+#confirm #form form .formpart .forminput{
+  font-size: 18px;
+  position: relative;
+  top: 8px;
+  font-family: none;
+}
+#confirm #form form .formpart .forminput.hope{
+  margin-bottom: 25px;
+}
+#confirm .submit{
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+#confirm .submit .syusei{
+  cursor: pointer;
+  text-align: center;
+  width: 10em;
+  display: block;
+  font-size: 24px;
+  padding: 15px 0;
+  border: 1px solid #cbcbcb;
+  background: white;
+  color: black;
+}
+#confirm .submit .syusei:hover{
+  background: #f5f5f5;
+}
+#confirm  #form form input[type="submit"]{
+  margin: 0;
+}
+
+@media (max-width: 768px){
+  #confirm{
+    margin-top: 60px;
+  }
+  #confirm .submit{
+    flex-direction: column-reverse;
+  }
+  #confirm #form form input[type="submit"]{
+    margin-bottom: 20px;
+  }
+}
+
+#thanks{
+  margin-top: 80px;
+}
+#thanks .thanks{
+  padding: 60px 0;
+  width: 90%;
+  margin: auto;
+}
+#thanks .thanks h1{
+  text-align: center;
+  font-size: 32px;
+  font-family: serif;
+  margin-bottom: 20px;
+}
+#thanks .thanks p{
+  text-align: center;
+  font-size: 18px;
+  font-family: serif;
+  line-height: 1.5;
+}
+#thanks .thanks p a{
+  cursor: pointer;
+  text-align: center;
+  width: 10em;
+  display: block;
+  margin: 20px auto;
+  font-size: 24px;
+  padding: 15px 0;
+  color: white;
+  background: #71513e;
+  border: 1px solid #71513e;
+  text-decoration: none;
+  border-radius: 20px;
+}
+#thanks .thanks p a:hover{
+  color: #71513e;
+  background: white;
+}
+.thanks-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 768px){
+  #thanks{
+    margin-top: 60px;
+  }
+  #thanks .thanks{
+    padding: 20px 0;
+    max-width: 450px;
+  }
+  #thanks .thanks h1{
+    font-size: 18px;
+  }
+  #thanks .thanks p{
+    font-size: 14px;
+    text-align: left;
+  }
+  #thanks .thanks p a{
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

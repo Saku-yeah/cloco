@@ -28,32 +28,49 @@
 </head>
 <body>
   <header>
-    <!-- ハンバーガーメニュー -->
-    <!--open menu-->
-    <p class="normal">
-      <a href="https://mymc.jp/">
+    <div class="pconly">
+      <a href="https://mymc.jp/" class="logo">
         <img src="img/logo.png" alt="MYメディカルクリニック田町三田">
       </a>
-    </p>
-    <div class="open-menu">
-      <div class="close">&times;</div>
       <ul>
-        <li><a href="#what">鼠径ヘルニアとは？</a></li>
-        <li><a href="#surgery">当院の手術方法</a></li>
-        <li><a href="#features">当院の特徴</a></li>
+        <li class="tate"><a href="#about">鼠径ヘルニアとは？</a></li>
+        <li><a href="#method">当院の<br>手術方法</a></li>
+        <li class="top"><a href="#features">当院の特徴</a></li>
         <li><a href="#doctors">医師紹介</a></li>
         <li><a href="#price">手術費用</a></li>
         <li><a href="#flow">日帰り手術の流れ</a></li>
         <li><a href="#access">アクセス</a></li>
-        <li><a href="#q&a">よくある質問</a></li>
-        <li><a href="#form">ご予約フォーム</a></li>
+        <li><a href="#qa">よくある質問</a></li>
       </ul>
+      <a href="#form" class="btn"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+    </div>
+    <div class="sponly">
+      <a href="https://mymc.jp/" class="logo">
+        <img src="img/logo-sp.png" alt="MYメディカルクリニック田町三田">
+      </a>
+      <div class="menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="open-menu">
+        <ul>
+          <div class="close"></div>
+          <li><a href="#what">鼠径ヘルニアとは？</a></li>
+          <li><a href="#surgery">当院の手術方法</a></li>
+          <li><a href="#features">当院の特徴</a></li>
+          <li><a href="#doctors">医師紹介</a></li>
+          <li><a href="#price">手術費用</a></li>
+          <li><a href="#flow">日帰り手術の流れ</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#qa">よくある質問</a></li>
+        </ul>
+      </div>
     </div>
   </header>
-	
     <main>
       <section id="fv">
-        <h1>
+          <h1>
           <img src="./img/fv-pc.png" alt="日帰り！痛みの少ない鼠径ヘルニア手術" class="pconly">
           <div class="fvctabox pconly">
             <div class="fvcta pconly">
@@ -68,89 +85,109 @@
           <img src="./img/fv-sp.png" alt="日帰り！痛みの少ない鼠径ヘルニア手術" class="sponly">
         </h1>
       </section>
-      <div class="inner">
-        <section id="about" class="normal">
-          <h2><span>鼠径ヘルニアとは？</span></h2>
+      <section class="sponly first-cta">
+        <div class="inner">
+          <p class="p-midashi">平日は最長<span>20</span>時まで、<br>土曜日も<span>17</span>時まで受診いただけます</p>
+          <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+          <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+          <p class="chui">完全予約制ではなく飛び込み受診も可能ですので、<br>まずはお電話を！</p>
+        </div>
+      </section>
+      <section id="about" class="normal">
+          <h2><span>鼠径ヘルニア</span>とは？</h2>
           <div class="title_en">WHAT</div>
-          <h3><span>こんな症状でお悩みはありませんか？</span></h3>
-            <div>
-              <img src="./img/worry-back.png" alt="こんな症状でお悩みはありませんか？">
-                <div>
-                  <img src="./img/worry-pc.png" alt="こんな症状でお悩みはありませんか？"  class="pconly">
-                  <img src="./img/worry-sp.png" alt="こんな症状でお悩みはありませんか？"  class="sponly">
-                  <div class="dotlist">
-                    <p><img src="./img/check.png" alt="こんな症状でお悩みはありませんか？" class="dot">立ち仕事や重いものを持つと違和感や痛みがある</p>
-                    <p><img src="./img/check.png" alt="こんな症状でお悩みはありませんか？" class="dot">下腹部が膨らむような感覚がある</p>
-                    <p><img src="./img/check.png" alt="こんな症状でお悩みはありませんか？" class="dot">違和感を放置して悪化が心配</p>
-                    <p><img src="./img/check.png" alt="こんな症状でお悩みはありませんか？" class="dot">立っていると下腹部の左右どちらかに腫れができ仰向けになると引っ込むことがある</p>
-                  </div>
-                  <img src="./img/worry-person.png" alt="こんな症状でお悩みはありませんか？">
+          <div class="inner">
+            <div class="eachworry">
+              <h3>こんな症状で<span>お悩み</span>はありませんか？</h3>
+              <div class="worrybox">
+                <img src="./img/worry-pc.png" alt="こんな症状でお悩みはありませんか？"  class="pconly">
+                <img src="./img/worry-sp.png" alt="こんな症状でお悩みはありませんか？"  class="sponly">
+                <ul>
+                  <li>立ち仕事や重いものを持つと<br class="sponly"><span>違和感や痛み</span>がある</li>
+                  <li><span>下腹部が膨らむ</span>ような感覚がある</li>
+                  <li>違和感を放置して悪化が心配</li>
+                  <li>立っていると<span>下腹部の左右どちらかに腫れ</span>ができ仰向けになると引っ込むことがある</li>
+                </ul>
+                <img src="./img/worry-person.png" alt="" class="person">
+              </div>
+            </div>
+            <div class="eachworry">
+              <h3><span>鼠径ヘルニア</span>とは？</h3>
+              <div class="aboutbox">
+                <div class="text">
+                  <p class="big">鼠径ヘルニア ( 脱腸 ) とは、<span>足の付け根部分の鼠径部にできるヘルニアの総称のこと</span>です。</p>
+                  <p class="small">
+                    <span>腸やその腸を覆う脂肪組織が本来の位置から飛び出した状態のこと</span>で、危険な状態 ( 嵌頓 ) になる前に早期治療をお勧めしております。<br>
+                    鼠径ヘルニアの手術は年間15万件以上手術が行われており、<span>男性のほうが発症数は多い(約8割)ですが、女性がかかっても不思議なことはありません。</span>            
+                  </p>
                 </div>
-            </div>
-          <h3><span>鼠径ヘルニアとは？</span></h3>
-            <div>
-              <img src="./img/about.png" alt="鼠径ヘルニアとは？">
-              <p>
-                鼠径ヘルニア ( 脱腸 ) とは、足の付け根部分の鼠径部にできるヘルニアの総称のことです。
-
-                腸やその腸を覆う脂肪組織が本来の位置から飛び出した状態のことで、危険な状態 ( 嵌頓 ) になる前に早期治療をお勧めしております。
-                鼠径ヘルニアの手術は年間15万件以上手術が行われており、男性のほうが発症数は多い(約8割)ですが、女性がかかっても不思議なことはありません。            </p>
-            </div>
-          <h3><span>鼠径ヘルニアの3つのタイプ</span></h3>
-              <p>
-                鼠径ヘルニア（脱腸）は、その発生する位置によって以下の3種類に分類されます。
-              </p>
-            <div>
-              <div>
-                <p>外鼠径ヘルニア<br>（間接型）</p>
-                <img src="./img/about-type1.png" alt="外鼠径ヘルニア">
-                <p>鼠径靱帯の上部で、外側から腸が飛び出すタイプです。鼠径ヘルニアの中で最も一般的なタイプです。</p>
-              </div>
-              <div>
-                <p>内鼠径ヘルニア<br>（直接型）</p>
-                <img src="./img/about-type2.png" alt="内鼠径ヘルニア">
-                <p>鼠径靱帯の上部で、内側から腸が飛び出すタイプです。中高年の男性に多く見られる特徴があります。</p>
-              </div>
-              <div>
-                <p>大腿ヘルニア</p>
-                <img src="./img/about-type3.png" alt="大腿ヘルニア">
-                <p>鼠径靱帯の下部から腸が飛び出すタイプです。出産経験のある女性に多く見られるヘルニアです。</p>
+                <img src="./img/about.png" alt="">
               </div>
             </div>
-        </section>
-        <section id="method" class="normal">
-          <h2><span>当院の手術方法</span></h2>
-          <div class="title_en">SURGERY</div>
-          <h3><span>鼠径ヘルニアの治療方法</span></h3>
-          <div>
-            <div>
-              <img src="./img/method1.png" alt="鼠径ヘルニアの治療方法">
-              <p>
-                鼠径ヘルニアの治療方法は「手術」のみです。
-
-                自然に治ることはなく、初期段階では日常生活に支障が出にくいため、治療が後回しにされやすい病気です。
-                しかし、症状が進行すると、自分で腸を元の位置に戻せなくなったり、痛みが強くなったり、腫れた部分が硬くなることがあります。これらは「嵌頓（かんとん）」と呼ばれる状態が疑われ、腸が締め付けられて血流が悪化し、最悪の場合、腸が壊死したり腸閉塞を引き起こして命に関わる可能性もあります。
-              </p>
+            <div class="sp-cta sponly">
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
             </div>
-            <div class="brown">
-              鼠径ヘルニア（脱腸）の手術は日帰りで受けることが可能です。<br>
-              症状が見られる方は、早めに医療機関を受診することをおすすめします。
+            <div class="eachworry type">
+              <h3><span>鼠径ヘルニア</span>の<span></span>3つ</span>のタイプ</h3>
+              <p>鼠径ヘルニア（脱腸）は、その発生する位置によって以下の3種類に分類されます。</p>
+              <ul>
+                <li>
+                  <h4><div><span>外鼠径ヘルニア</span><br>（間接型）</div></h4>
+                  <img src="./img/about-type1.png" alt="">
+                  <p><span>鼠径靱帯の上部で、外側から腸が飛び出す</span>タイプです。鼠径ヘルニアの中で最も一般的なタイプです。</p>
+                </li>
+                <li>
+                  <h4><div><span>内鼠径ヘルニア</span><br>（直接型）</div></h4>
+                  <img src="./img/about-type2.png" alt="">
+                  <p><span>鼠径靱帯の上部で、内側から腸が飛び出す</span>タイプです。中高年の男性に多く見られる特徴があります。</p>
+                </li>
+                <li>
+                  <h4><div><span>大腿ヘルニア</span></div></h4>
+                  <img src="./img/about-type3.png" alt="">
+                  <p><span>鼠径靱帯の下部から腸が飛び出す</span>タイプです。出産経験のある女性に多く見られるヘルニアです。</p>
+                </li>
+              </ul>
+            <div class="sp-cta sponly">
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
             </div>
           </div>
-          <h3><span>手術方法</span></h3>
-          <div>
-            <div>
-              <div>
+        </section>
+        <section id="method" class="normal">
+          <h2><span>当院</span>の<span>手術方法</span></h2>
+          <div class="title_en">SURGERY</div>
+          <div class="inner">
+            <div class="eachmethod">
+              <h3><span>鼠径ヘルニア</span>の<span>治療方法</span></h3>
+              <div class="method1">
+                <img src="./img/methodr.png" alt="">
+                <div class="text">
+                  <p class="big">
+                    <span>鼠径ヘルニアの治療方法は「手術」のみ</span>です。
+                  </p>
+                  <p class="small">
+                    <span>自然に治ることはなく</span>、初期段階では日常生活に支障が出にくいため、治療が後回しにされやすい病気です。<br>
+                    しかし、症状が進行すると、自分で腸を元の位置に戻せなくなったり、痛みが強くなったり、腫れた部分が硬くなることがあります。これらは「嵌頓（かんとん）」と呼ばれる状態が疑われ、腸が締め付けられて血流が悪化し、<span>最悪の場合、腸が壊死したり腸閉塞を引き起こして命に関わる可能性もあります。</span>
+                  </p>
+                </div>
+              </div>
+              <div class="brown pconly">
+                鼠径ヘルニア（脱腸）の手術は日帰りで受けることが可能です。<br>症状が見られる方は、早めに医療機関を受診することをおすすめします。
+              </div>
+            </div>
+            <div class="eachmethod pconly">
+              <h3><span>手術方法</span></h3>
+              <div class="methodl">
+              <div class="image">
                 <img src="./img/method2-1.png" alt="手術方法①">
                 <img src="./img/right.png" alt="手術方法の矢印">
                 <img src="./img/method2-2.png" alt="手術方法②">
               </div>
               <p>
-                全身麻酔を使用し、まずお腹に3か所の小さな穴を開けます。
-                そのうち1つの穴から細いカメラを挿入し、お腹の中の様子をモニターに映し出しながら手術を進めます。
-                メッシュを挿入して病変部分を補強し、周辺の膜を処置した後、最終的に縫合します。
-                ※メッシュは腹腔鏡器具と同様に、傷口が小さくても挿入可能なように丸めて細くした状態で使用します。
-                この技術に関する特許取得や、ズレによる再発を抑えるメッシュの使用にこだわることで、当院の手術の安定性を高めています。
+                全身麻酔を使用し、まずお腹に3か所の小さな穴を開けます。<br>
+                そのうち1つの穴から細いカメラを挿入し、お腹の中の様子をモニターに映し出しながら手術を進めます。<br>
+                メッシュを挿入して病変部分を補強し、周辺の膜を処置した後、最終的に縫合します。<br>
+                <small>※メッシュは腹腔鏡器具と同様に、傷口が小さくても挿入可能なように丸めて細くした状態で使用します。<br></small>
+                <span>この技術に関する特許取得や、ズレによる再発を抑えるメッシュの使用にこだわることで、当院の手術の安定性を高めています。</span><br>
                 手術時間はおおよそ60分です。
               </p>
             </div>
@@ -160,216 +197,292 @@
               また、術後の痛みが軽減される点も大きなメリットです。
             </div>
           </div>
-          <h3><span>腹腔鏡</span></h3>
-          <div>
-            <div>
-              <img src="./img/method3.png" alt="鼠径ヘルニアの治療方法">
-              <p>
-                腹腔鏡手術は、胃や大腸などの手術と同様の方法で行い、5mm～12mm の穴を3ヶ所開けて実施します。1つの穴から腹腔鏡を挿入しモニターに映像を表示、残りの2つから手術器具を操作 して、メッシュでヘルニア部分を補強します。
-                この手術は傷跡が目立ちにくく、左右のヘルニアも同時治療が可能で、小さなヘルニアの見落としが少ない点が利点です。ただし、手術時間が約50分と長めで、全身麻酔が必要です。
-              </p>
+          <div class="eachmethod">
+            <h3><span>腹腔鏡</span></h3>
+            <div class="methodr">
+              <img src="./img/method3.png" alt="">
+              <div class="text">
+                <p class="small mt0">
+                  腹腔鏡手術は、胃や大腸などの手術と同様の方法で行い、5mm～12mm の穴を3ヶ所開けて実施します。1つの穴から腹腔鏡を挿入しモニターに映像を表示、残りの2つから手術器具を操作
+                  して、メッシュでヘルニア部分を補強します。<br>
+                  この手術は傷跡が目立ちにくく、左右のヘルニアも同時治療が可能で、<span>小さなヘルニアの見落としが少ない点が利点です。</span>ただし、<span>手術時間が約50分と長めで、全身麻酔が必要です。</span>
+                </p>
+              </div>
             </div>
-            <p>
-              鼠径ヘルニア（脱腸）の手術は日帰りで受けることが可能です。
-              症状が見られる方は、早めに医療機関を受診することをおすすめします。
+            <div class="brown">
+              当院では患者様の状態や希望に応じた最適な方法を提案していますので、<br>医師にお気軽にご相談ください。
+            </div>
+            <p class="text">
+              <span>手術には全身麻酔が必要です。</span><br>
+              全身麻酔には、患者の状態を正確に評価し、最適な麻酔計画を立案する診断スキルや麻酔薬の使用と近畿を理解する薬学的な知識、術中の合併症への対応スキル等、多くの李子規と経験が求められます。<br>
+              そのため<span>当院では外科医と麻酔科医の2名の専門医による立い会いのもと手術が行われます。</span><br>
             </p>
-          </div>      
-        </section>
-      </div>
-      <div class="fvctabox pconly">
-        <div class="fvcta pconly">
-          <img src="./img/fvtext-1.png" alt="平日は最長20時まで、土曜日も17時まで受診いただけます" class="text1">
-          <div class="box">
+          </div>
+          <div class="sp-cta sponly">
             <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
-            <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
           </div>
-          <img src="./img/fvtext-2.png" alt="完全予約制ではなく飛び込み受診も可能ですので、まずはお電話を！" class="text2">
+        </div>     
+        </section>
+        <section class="cta pconly">
+          <div class="inner box">
+            <p class="p-midashi">平日は最長<span>20</span>時まで、<br>土曜日も<span>17</span>時まで受診いただけます</p>
+            <div class="cta-box">
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </div>
+            <p class="chui">完全予約制ではなく飛び込み受診も可能ですので、<br>まずはお電話を！</p>
+          </div>
+        </section>
+        <section id="features" class="normal">
+          <h2><span>当院の特徴</span></h2>
+          <div class="title_en">FEATURES</div>
+          <h3><span>MYメディカルクリニック<br class="sponly">日帰り手術センターの特徴</span></h3>
+          <p>
+            当院で施行する鼠径ヘルニア手術は一般外科手術を十分に経験した外科専門医が執刀し、<br>
+            麻酔管理は経験豊富な麻酔科専門医が管理します。<br>
+            患者様の苦痛や負担を最小限に抑えた配慮を行い、正確な手術を心掛けて行います。
+          </p>
+          <div class="inner">
+            <ul>
+              <li>
+                <div class="head">
+                  <div class="number">01</div>
+                  <h4>
+                    <div>負担の少ない<br>鼠径ヘルニア手術</div>
+                  </h4>
+                </div>
+                <img src="./img/feature1.png" alt="">
+                <p>全身麻酔を用いてしっかり眠っていただいた状態で手術が受けられるようきめ細やかな配慮を行っています。また術後の疼痛を緩和する目的で伝達麻酔（ブロック注射）を手術終了時に超音波ガイド下で行います。<span>眠った状態での手術のため手術中の痛みや恐怖感はなく、安心して手術を受けていただき、また術後の痛みもほとんどない状態で帰宅していただきます。</span></p>
+              </li>
+              <li>
+                <div class="head">
+                  <div class="number">02</div>
+                    <h4>
+                      <div>日帰り手術のみの<br>対応</div>
+                    </h4>
+                </div>
+                <img src="./img/feature2.png" alt="">
+                <p>当院で行う鼠径ヘルニアの手術は、日帰り手術対応のため、職場や自宅を長期間空けられない方に最適な治療方法となっております。<span>眠った状態での手術のため手術中の痛みや恐怖感はなく、安心して手術を受けていただき、また術後の痛みもほとんどない状態で帰宅していただきます。</span></p>
+              </li>
+              <li>
+                <div class="head">
+                  <div class="number">03</div>
+                    <h4>
+                      <div>駅近の好立地</div>
+                    </h4>
+                </div>
+                <img src="./img/feature3.png" alt="">
+                <p><span>JR山手線・京浜東北線「田町」駅徒歩2分ペデストリアンデッキ直結、都営地下鉄三田線・浅草線「三田」駅直結</span>と2駅からのアクセスが可能となっており、かつ駅近のため近郊にお住まいの方にとって、交通アクセスの良い立地です。</p>
+              </li>
+              <li>
+                <div class="head">
+                  <div class="number">04</div>
+                  <h4>
+                    <div>手術だけでなく<br>幅広い診療に対応</div>
+                  </h4>
+                </div>
+                <img src="./img/feature4.png" alt="">
+                <p>MYメディカルクリニックでは、日帰り手術だけでなく総合内科や<span>専門外来、予防接種や人間ドック</span>など幅広く対応しているため、お気軽にご相談ください。</p>
+              </li>
+              <li>
+                <div class="head">
+                  <div class="number">05</div>
+                  <h4>
+                    <div>手術後はそのまま<br>リカバリー室へ</div>
+                  </h4>
+                </div>
+                <img src="./img/feature5.png" alt="">
+                <p>手術では麻酔を使用いたします。術後人によってはウトウトした状態が続いてしまうため、横になったままで移動していただき、<span>院内のリカバリースペースで目が覚めるまでゆっくりと過ごしていただくことができます。</span></p>
+              </li>
+            </ul>
+          <div class="brown pconly">
+            鼠径ヘルニアを始めとした外科手術を十分に経験した医師が執刀いたします。<br>
+            患者様の苦痛や負担を最小限に抑えた配慮を行い、正確な手術を心掛けて行います。
+          </div>
         </div>
-      </div>
-      <section id="features" class="normal">
-        <h2><span>当院の特徴</span></h2>
-        <div class="title_en">FEATURES</div>
-        <h3><span>MYメディカルクリニック日帰り手術センターの特徴</span></h3>
-        <p>
-          当院で施行する鼠径ヘルニア手術は一般外科手術を十分に経験した外科専門医が執刀し、<br>
-          麻酔管理は経験豊富な麻酔科専門医が管理します。<br>
-          患者様の苦痛や負担を最小限に抑えた配慮を行い、正確な手術を心掛けて行います。<br>
-        </p>
-        <div>
-          <div>
-            <p>①負担の少ない<br>鼠径ヘルニア手術</p>
-            <img src="./img/feature1.png" alt="MYメディカルクリニック日帰り手術センターの特徴">
-            <p>全身麻酔を用いてしっかり眠っていただいた状態で手術が受けられるようきめ細やかな配慮を行っています。また術後の疼痛を緩和する目的で伝達麻酔（ブロック注射）を手術終了時に超音波ガイド下で行います。眠った状態での手術のため手術中の痛みや恐怖感はなく、安心して手術を受けていただき、また術後の痛みもほとんどない状態で帰宅していただきます。</p>
-          </div>
-          <div>
-            <p>②日帰り手術のみの<br>対応</p>
-            <img src="./img/feature2.png" alt="MYメディカルクリニック日帰り手術センターの特徴">
-            <p>当院で行う鼠径ヘルニアの手術は、日帰り手術対応のため、職場や自宅を長期間空けられない方に最適な治療方法となっております。</p>
-          </div>
-          <div>
-            <p>③駅近の好立地</p>
-            <img src="./img/feature3.png" alt="MYメディカルクリニック日帰り手術センターの特徴">
-            <p>JR山手線・京浜東北線「田町」駅徒歩2分ペデストリアンデッキ直結、都営地下鉄三田線・浅草線「三田」駅直結と2駅からのアクセスが可能となっており、かつ駅近のため近郊にお住まいの方にとって、交通アクセスの良い立地です。</p>
-          </div>
-          <div>
-            <p>④手術だけでなく<br>幅広い診療に対応</p>
-            <img src="./img/feature4.png" alt="MYメディカルクリニック日帰り手術センターの特徴">
-            <p>MYメディカルクリニックでは、日帰り手術だけでなく総合内科や専門外来、予防接種や人間ドックなど幅広く対応しているため、お気軽にご相談ください。</p>
-          </div>
-          <div>
-            <p>⑤手術後はそのまま<br>リカバリー室へ</p>
-            <img src="./img/feature5.png" alt="MYメディカルクリニック日帰り手術センターの特徴">
-            <p>手術では麻酔を使用いたします。術後人によってはウトウトした状態が続いてしまうため、横になったままで移動していただき、院内のリカバリースペースで目が覚めるまでゆっくりと過ごしていただくことができます。</p>
-          </div>
-        </div>
-        <div class="brown">
-          鼠径ヘルニアを始めとした外科手術を十分に経験した医師が執刀いたします。<br>
-          患者様の苦痛や負担を最小限に抑えた配慮を行い、正確な手術を心掛けて行います。
+        <div class="inner sp-cta sponly">
+          <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
         </div>
       </section>
       <section id="doctors" class="normal">
         <h2><span>医師紹介</span></h2>
         <div class="title_en">DOCTORS</div>
-        <div class="doctorlist">
-          <div>
-            <img src="./img/doctor1.png" alt="執刀医安江 英晴">
+        <ul>
+          <li>
+            <div class="image"><img src="./img/doctor1.png" alt=""></div>
             <div class="desc">
-              <p class="name">執刀医安江 英晴</p>
-              <p class="career">
-                出身大学<br>
-                東京慈恵会医科大学<br>
-                資格<br>
-                日本消化器内視鏡学会専門医<br>
-                日本外科学会専門医<br>
-                日本消化器外科学会専門医<br>
-                日本消化器病学会専門医<br>
-                マンモグラフィー読影認定医<br>
-                日本医師会認定産業医<br>
+              <div class="name"><span>執刀医</span>安江 英晴</div>
+              <div class="career">
+                <div class="tit">出身大学</div>
+                <div class="content">東京慈恵会医科大学</div>
+                <div class="tit">資格</div>
+                <div class="content small">
+                  日本消化器内視鏡学会専門医<br>
+                  日本外科学会専門医<br>
+                  日本消化器外科学会専門医<br>
+                  日本消化器病学会専門医<br>
+                  マンモグラフィー読影認定医<br>
+                  日本医師会認定産業医<br>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="image"><img src="./img/doctor2.png" alt=""></div>
+            <div class="desc">
+              <div class="name"><span>診察医</span>馬場 健</div>
+              <div class="career">
+                <div class="tit">出身大学</div>
+                <div class="content">東京慈恵会医科大学</div>
+                <div class="tit">資格</div>
+                <div class="content small">
+                  医学博士<br>
+                  日本外科学会専門医・指導医<br>
+                  三学会構成心臓血管外科専門医・修練指導者<br>
+                  日本脈管学会専門医<br>
+                  日本血管外科学会血管内治療認定医<br>
+                  下肢静脈瘤血管内焼灼術実施医・指導医<br>
+                  腹部ステントグラフト実施医・指導医<br>
+                  胸部ステントグラフト実施医・指導医<br>
+                  SFA ステントグラフト実施医<br>
+                  VAIVT 認定専門医<br>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="image"><img src="./img/doctor3.png" alt="麻酔科医高宮 達郎"></div>
+            <div class="desc">
+              <div class="name"><span>麻酔科医</span>高宮 達郎</div>
+              <div class="career">
+                <div class="tit">出身大学</div>
+                <div class="content">東京慈恵会医科大学</div>
+                <div class="tit">資格</div>
+                <div class="content small">
+                  日本麻酔科学会専門医
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="image"><img src="./img/doctor4.png" alt="塩屋 由希子"></div>
+            <div class="desc">
+              <div class="name"><span>塩屋 由希子</span></div>
+              <div class="career">
+                <div class="tit">出身大学</div>
+                <div class="content">東京慈恵会医科大学</div>
+                <div class="tit">資格</div>
+                <div class="content small">
+                  日本麻酔科学会専門医<br>
+                  日本内科学会認定医<br>
+                  Master of Public Health 取得<br>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="image"><img src="./img/doctor5.png" alt="執刀医武田 泰裕"></div>
+            <div class="desc">
+              <div class="name"><span>執刀医</span>武田 泰裕</div>
+              <div class="career">
+                <div class="tit">出身大学</div>
+                <div class="content">東京慈恵会医科大学 外科学講座 下部消化管外科</div>
+                <div class="tit">資格</div>
+                <div class="content small">
+                  日本外科学会 専門医・指導医<br>
+                  日本消化器外科学会 専門医・指導医<br>
+                  消化器がん外科治療認定医<br>
+                  日本大腸肛門病学会 専門医<br>
+                  日本内視鏡外科学会技術認定医（大腸）<br>
+                  日本内視鏡外科学会 評議員<br>
+                  日本内視鏡外科学会ロボット支援手術認定プロクター（大腸）<br>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="inner">
+          <div class="brown pconly">
+            鼠径ヘルニア手術の経験豊富な麻酔科医と外科医のチームで<br>痛みの少ない日帰り手術をご提供いたします。
+          </div>
+          <h3><span>当院</span>の<span>麻酔方法</span></h3>
+          <div class="masuibox">
+            <img src="./img/masui.png" alt="" class="pconly">
+            <img src="./img/masui-sp.png" alt="" class="sponly">
+            <div class="text">
+              <p class="big">
+                全身麻酔と伝達麻酔を併用します
+              </p>
+              <p class="small">
+                腹腔鏡手術は、全例全身麻酔で行いますので、目が覚めたら手術は終了しています。麻酔薬は術後の嘔気が出にくい薬剤を選択し、術後の疼痛を緩和する目的で伝達麻酔（ブロック注射）を手術終了時に超音波ガイド下で行います。
               </p>
             </div>
           </div>
-          <div>
-            <img src="./img/doctor2.png" alt="診察医馬場 健">
-            <div class="desc">
-              <p class="name"><div class="brown">診察医</div>馬場 健</p>
-              <p class="career">
-                出身大学<br>
-                東京慈恵会医科大学<br>
-                資格<br>
-                医学博士<br>
-                日本外科学会専門医・指導医<br>
-                三学会構成心臓血管外科専門医・修練指導者<br>
-                日本脈管学会専門医<br>
-                日本血管外科学会血管内治療認定医<br>
-                下肢静脈瘤血管内焼灼術実施医・指導医<br>
-                腹部ステントグラフト実施医・指導医<br>
-                胸部ステントグラフト実施医・指導医<br>
-                SFA ステントグラフト実施医<br>
-                VAIVT 認定専門医<br>
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src="./img/doctor3.png" alt="麻酔科医高宮 達郎">
-            <div class="desc">
-              <p class="name">麻酔科医高宮 達郎</p>
-              <p class="career">
-                出身大学<br>
-                東京慈恵会医科大学<br>
-                資格<br>
-                日本麻酔科学会専門医<br>
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src="./img/doctor4.png" alt="塩屋 由希子">
-            <div class="desc">
-              <p class="name">塩屋 由希子</p>
-              <p class="career">
-                出身大学<br>
-                東京慈恵会医科大学<br>
-                資格<br>
-                日本麻酔科学会専門医<br>
-                日本内科学会認定医<br>
-                Master of Public Health 取得<br>
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src="./img/doctor5.png" alt="執刀医武田 泰裕">
-            <div class="desc">
-              <p class="name">執刀医武田 泰裕</p>
-              <p class="career">
-                出身大学<br>
-                東京慈恵会医科大学 外科学講座 下部消化管外科<br>
-                資格<br>
-                日本外科学会 専門医・指導医<br>
-                日本消化器外科学会 専門医・指導医<br>
-                消化器がん外科治療認定医<br>
-                日本大腸肛門病学会 専門医<br>
-                日本内視鏡外科学会技術認定医（大腸）<br>
-                日本内視鏡外科学会 評議員<br>
-                日本内視鏡外科学会ロボット支援手術認定プロクター（大腸）<br>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="brown">
-          鼠径ヘルニア手術の経験豊富な麻酔科医と外科医のチームで<br>
-          痛みの少ない日帰り手術をご提供いたします。<br>       
-        </div>
-        <h3><span>当院の麻酔方法</span></h3>
-        <div>
-          <img src="./img/masui.png" alt="当院の麻酔方法" class="pconly">
-          <img src="./img/masui-sp.png" alt="当院の麻酔方法"  class="sponly">
-          <p>
-          全身麻酔と伝達麻酔を併用します。<br>
-
-          腹腔鏡手術は、全例全身麻酔で行いますので、目が覚めたら手術は終了しています。麻酔薬は術後の嘔気が出にくい薬剤を選択し、術後の疼痛を緩和する目的で伝達麻酔（ブロック注射）を手術終了時に超音波ガイド下で行います。<br>
-          </p>
         </div>
       </section>
       <section id="price" class="normal">
         <h2><span>手術費用</span></h2>
         <div class="title_en">PRICE</div>
-        <table>
+        <table class="inner pconly">
           <tr>
-            <th></th>
-            <th>3割負担の場合</th>
-            <th>2割負担の場合</th>
-            <th>1割負担の場合</th>
+            <th class="emp"></th>
+            <th class="hu3">3割負担の場合</th>
+            <th class="hu2">2割負担の場合</th>
+            <th class="hu1">1割負担の場合</th>
           </tr>
           <tr>
-            <td>初診料</td>
-            <td>2,000円程度</td>
-            <td>1,300円程度</td>
-            <td>700円程度</td>
+            <th class="midashi">初診料</th>
+            <td><span>2,000</span>円程度</td>
+            <td><span>1,300</span>円程度</td>
+            <td><span>700</span>円程度</td>
           </tr>
           <tr>
-            <td>事前検査料</td>
-            <td>5,000円程度</td>
-            <td>3,300円程度</td>
-            <td>1,500円程度</td>
+            <th class="midashi">事前検査料</th>
+            <td><span>5,000</span>円程度</td>
+            <td><span>3,000</span>円程度</td>
+            <td><span>1,500</span>円程度</td>
           </tr>
           <tr>
-            <td>手術費用</td>
-            <td>80,000円程度</td>
-            <td>36,000円程度</td>
-            <td>18,000円程度</td>
+            <th class="midashi">手術費用</th>
+            <td><span>80,000</span>円程度</td>
+            <td><span>36,000</span>円程度</td>
+            <td><span>18,000</span>円程度</td>
+          </tr>
         </table>
-      </section>
-      <div class="fvctabox pconly">
-        <div class="fvcta pconly">
-          <img src="./img/fvtext-1.png" alt="平日は最長20時まで、土曜日も17時まで受診いただけます" class="text1">
-          <div class="box">
-            <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
-            <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
-          </div>
-          <img src="./img/fvtext-2.png" alt="完全予約制ではなく飛び込み受診も可能ですので、まずはお電話を！" class="text2">
+        <table class="inner sponly">
+          <tr><th></th><th class="hu3">3割負担の場合</th></tr>
+          <tr><th class="midashi">初診料</th><td><span>2,000</span>円程度</td></tr>
+          <tr><th class="midashi">事前検査料</th><td><span>5,000</span>円程度</td></tr>
+          <tr><th class="midashi">手術費用</th><td><span>80,000</span>円程度</td></tr>
+        </table>
+        <table class="inner sponly">
+          <tr><th></th><th class="hu2">2割負担の場合</th></tr>
+          <tr><th class="midashi">初診料</th><td><span>1,300</span>円程度</td></tr>
+          <tr><th class="midashi">事前検査料</th><td><span>3,000</span>円程度</td></tr>
+          <tr><th class="midashi">手術費用</th><td><span>36,000</span>円程度</td></tr>
+        </table>
+        <table class="inner sponly">
+          <tr><th></th><th class="hu1">1割負担の場合</th></tr>
+          <tr><th class="midashi">初診料</th><td><span>700</span>円程度</td></tr>
+          <tr><th class="midashi">事前検査料</th><td><span>1,500</span>円程度</td></tr>
+          <tr><th class="midashi">手術費用</th><td><span>18,000</span>円程度</td></tr>
+        </table>
+        <div class="inner sp-cta sponly">
+          <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
         </div>
-      </div>
+      </section>
+        <section class="cta pconly">
+          <div class="inner box">
+            <p class="p-midashi">平日は最長<span>20</span>時まで、<br>土曜日も<span>17</span>時まで受診いただけます</p>
+            <div class="cta-box">
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </div>
+            <p class="chui">完全予約制ではなく飛び込み受診も可能ですので、<br>まずはお電話を！</p>
+          </div>
+        </section>
       <section id="flow" class="normal">
-        <h2><span>日帰り手術の流れ</span></h2>
+        <h2><span>日帰り手術</span>の<span>流れ</span></h2>
         <div class="title_en">FLOW</div>
         <h3><span>鼠径ヘルニア手術の流れ</span></h3>
         <p>
@@ -377,47 +490,124 @@
         ご来院頂くのは、基本的には手術前診察（初診）と手術時の２回になります。<br>
         術後は必ずしもご来院頂く必要はありませんが、患者さまからご希望があれば診察可能な体制を整えております。<br>
         </p>
-        <div class="slide-area">
-          <div class="slide-items">
-            <div class="slide-item">
-              <p><span class="brown-text">01</span>診察予約</p>
-              <img src="./img/flow1.png" alt="鼠径ヘルニア手術の流れ①">
-            </div>
-            <div class="slide-item">
-              <p><span class="brown-text">02</span>診察</p>
-              <img src="./img/flow2.png" alt="鼠径ヘルニア手術の流れ②">
-            </div>
-            <div class="slide-item">
-              <p><span class="brown-text">03</span>手術当日</p>
-              <img src="./img/flow3.png" alt="鼠径ヘルニア手術の流れ③">
-            </div>
-            <div class="slide-item">
-              <p><span class="brown-text">04</span>術後診察</p>
-              <img src="./img/flow4.png" alt="鼠径ヘルニア手術の流れ④">
-            </div>
-          </div>
-        </div>
+        <ul id="flow-slider" class="pconly">
+          <li class="flowpart">
+            <h4><span>01</span>診察予約</h4>
+            <img src="./img/flow1.png" alt="">
+            <p>
+              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>02</span>診察</h4>
+            <img src="./img/flow2.png" alt="">
+            <p>
+              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>03</span>手術当日</h4>
+            <img src="./img/flow3.png" alt="">
+            <p>
+              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>04</span>術後診察</h4>
+            <img src="./img/flow4.png" alt="">
+            <p>
+              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>01</span>診察予約</h4>
+            <img src="./img/flow1.png" alt="">
+            <p>
+              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
+              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>02</span>診察</h4>
+            <img src="./img/flow2.png" alt="">
+            <p>
+              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>03</span>手術当日</h4>
+            <img src="./img/flow3.png" alt="">
+            <p>
+              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>04</span>術後診察</h4>
+            <img src="./img/flow4.png" alt="">
+            <p>
+              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
+            </p>
+          </li>
+        </ul>
+        <ul id="flow-slider2" class="sponly">
+          <li class="flowpart">
+            <h4><span>01</span>診察予約</h4>
+            <img src="./img/flow1.png" alt="">
+            <p>
+              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
+              <a href="#form" style="margin-top: 60px;"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>02</span>診察</h4>
+            <img src="./img/flow2.png" alt="">
+            <p>
+              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>03</span>手術当日</h4>
+            <img src="./img/flow3.png" alt="">
+            <p>
+              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>04</span>術後診察</h4>
+            <img src="./img/flow4.png" alt="">
+            <p>
+              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
+            </p>
+          </li>
+        </ul>
       </section>
       <section id="access" class="normal">
         <h2><span>アクセス</span></h2>
         <div class="title_en">ACCESS</div>
-        <h3><span>MYメディカルクリニック田町三田のご紹介</span></h3>
-        <div>
-          <div>
-            <img src="./img/access1.png" alt="MYメディカルクリニック田町三田のご紹介">
-            <img src="./img/access2.png" alt="MYメディカルクリニック田町三田のご紹介">
-            <img src="./img/access3.png" alt="MYメディカルクリニック田町三田のご紹介">
-            <img src="./img/access4.png" alt="MYメディカルクリニック田町三田のご紹介">
-            <img src="./img/access5.png" alt="MYメディカルクリニック田町三田のご紹介">
-          </div>
-          <div>
-            <div class="brown"><img src="./img/icon1.png" alt="住所">住所</div>
-            東京都港区芝5-33-11 田町タワー4階<br>
-            <div class="brown"><img src="./img/icon2.png" alt="アクセス">アクセス</div>
-            JR山手線・京浜東北線田町駅 徒歩2分<br>
-            都営地下鉄三田線・浅草線三田駅 直結<br>
-            <div class="brown"><img src="./img/icon1.png" alt="診察時間">診察時間</div>
-            <div>
+        <h3><span>MYメディカルクリニック田町三田</span>の<span>ご紹介</span></h3>
+        <div class="accessbox inner">
+          <ul id="access-slider">
+            <li class="accesspart"><img src="./img/access1.png" alt=""></li>
+            <li class="accesspart"><img src="./img/access2.png" alt=""></li>
+            <li class="accesspart"><img src="./img/access3.png" alt=""></li>
+            <li class="accesspart"><img src="./img/access4.png" alt=""></li>
+            <li class="accesspart"><img src="./img/access5.png" alt=""></li>
+          </ul>
+          <ul class="desc">
+            <li>
+              <h4><img src="./img/icon1.png" alt="住所"><div>住所</div></h4>
+              <p>東京都港区芝5-33-11 田町タワー4階</p>
+            </li>
+            <li>
+              <h4><img src="./img/icon2.png" alt="アクセス"><div>アクセス</div></h4>
+              <p>JR山手線・京浜東北線田町駅 徒歩2分<br>都営地下鉄三田線・浅草線三田駅 直結</p>
+            </li>
+            <li>
+              <h4><img src="./img/icon3.png" alt="診察時間"><div>診察時間</div></h4>            <div>
               <table>
                 <tr>
                   <th></th>
@@ -426,79 +616,96 @@
                   <th>水</th>
                   <th>木</th>
                   <th>金</th>
-                  <th>土</th>
-                  <th>日</th>
-                  <th>祝</th>
+                  <th style="color: #0072c1;">土</th>
+                  <th style="color: #ff0003;">日</th>
+                  <th style="color: #ff0003;">祝</th>
                 </tr>
                 <tr>
                   <td>08:30~12:30</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
                   <td>－</td>
                   <td>－</td>
                 </tr>
                 <tr>
                   <td>13:30~16:30</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
                   <td>－</td>
                   <td>－</td>
                 </tr>
                 <tr>
-                  <td>18:00~20:00</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
-                  <td>●</td>
+                  <td class="last">18:00~20:00</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
+                  <td class="ma">●</td>
                   <td>－</td>
                   <td>－</td>
                   <td>－</td>
                 </tr>
               </table>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
-      <section id="q&a" class="normal">
+      <section id="qa" class="normal">
         <h2><span>よくある質問</span></h2>
         <div class="title_en">Q&A</div>
-        <details>
-          <summary>手術を受けるのに入院は必要ですか？</summary>
-          <p>MYメディカルクリニックでは日帰りのみでの治療を行っているため入院の必要はございません。<br>ですが、手術を受ける病院・クリニックによっては、数日程度の短期入院が必要な場合があるため事前に確認することをおすすめいたします。</p>
-        </details>
-        <details>
-          <summary>手術の痛みはどの程度ですか？</summary>
-          <p>手術中は麻酔を使用するため痛みを感じません。術後数日は多少の痛みや違和感を感じることがありますが、痛み止めを使用することで問題なく管理できます。</p>
-        </details>
-        <details>
-          <summary>手術後、どのくらいで日常生活に復帰できますか？</summary>
-          <p>日常活動には手術後数日から1週間程度で復帰できます。激しい運動や重労働には数週間以上かかることが一般的ですので、医師の指示を守り、無理のない範囲で生活してください。</p>
-        </details>
-        <details>
-          <summary>鼠径ヘルニア手術を受けるタイミングはいつが良いですか？</summary>
-          <p>症状が進行する前に早めの手術を検討することが推奨されます。特に痛みや膨らみが増している場合、緊急手術が必要になるリスクを避けるため、早めに医師に相談してください。</p>
-        </details>
-        <details>
-          <summary>鼠径ヘルニアは放置しても大丈夫ですか？</summary>
-          <p>放置すると、腸が締め付けられる「嵌頓（かんとん）」状態になるリスクがあります。これは緊急手術が必要になる可能性があるため、早めの治療が推奨されます。</p>
-        </details>
-        <details>
-          <summary>手術後に運転はできますか？</summary>
-          <p>手術当日の運転はお控えください。麻酔の影響や術後の疲労が残る可能性があるため、帰宅時は家族や友人に送迎をお願いするか、タクシーなどを利用してください。</p>
-        </details>
-        <details>
-          <summary>鼠径ヘルニアは自然に治りますか？</summary>
-          <p>鼠径ヘルニアは自然に治ることはありません。放置すると症状が悪化し危険な状態になる可能性があります。早めに医師に相談し、適切な治療を検討することをお勧めします。</p>
-        </details>
+          <ul class="inner qa">
+          <li>
+            <h3>手術を受けるのに入院は必要ですか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              MYメディカルクリニックでは日帰りのみでの治療を行っているため入院の必要はございません。<br>
+              ですが、手術を受ける病院・クリニックによっては、数日程度の短期入院が必要な場合があるため事前に確認することをおすすめいたします。
+            </p>
+          </li>
+          <li>
+            <h3>手術の痛みはどの程度ですか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              手術中は麻酔を使用するため痛みを感じません。術後数日は多少の痛みや違和感を感じることがありますが、痛み止めを使用することで問題なく管理できます。
+            </p>
+          </li>
+          <li>
+            <h3>手術後、どのくらいで日常生活に<br class="sponly">復帰できますか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              日常活動には手術後数日から1週間程度で復帰できます。激しい運動や重労働には数週間以上かかることが一般的ですので、医師の指示を守り、無理のない範囲で生活してください。
+            </p>
+          </li>
+          <li>
+            <h3>鼠径ヘルニア手術を受けるタイミングは<br class="sponly">いつが良いですか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              症状が進行する前に早めの手術を検討することが推奨されます。特に痛みや膨らみが増している場合、緊急手術が必要になるリスクを避けるため、早めに医師に相談してください。
+            </p>
+          </li>
+          <li>
+            <h3>鼠径ヘルニアは放置しても大丈夫ですか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              放置すると、腸が締め付けられる「嵌頓（かんとん）」状態になるリスクがあります。これは緊急手術が必要になる可能性があるため、早めの治療が推奨されます。
+            </p>
+          </li>
+          <li>
+            <h3>手術後に運転はできますか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              手術当日の運転はお控えください。麻酔の影響や術後の疲労が残る可能性があるため、帰宅時は家族や友人に送迎をお願いするか、タクシーなどを利用してください。
+            </p>
+          </li>
+          <li>
+            <h3>鼠径ヘルニアは自然に治りますか？<img src="./img/arrow.png" alt=""></h3>
+            <p>
+              鼠径ヘルニアは自然に治ることはありません。放置すると症状が悪化し危険な状態になる可能性があります。早めに医師に相談し、適切な治療を検討することをお勧めします。
+            </p>
+          </li>
+        </ul>
       </section>
       <section id="form" class="normal">
         <h2><span>ご予約フォーム</span></h2>
