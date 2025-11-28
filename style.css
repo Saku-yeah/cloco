@@ -150,7 +150,7 @@ section.normal h3 span{
 }
 
 /* --- 背景色 --- */
-#about, #feature, #price, #access, #form {
+#about, #features, #price, #access, #form {
     background: #f8f6f5; /* 薄いグレーの背景色 */
 }
 
@@ -623,6 +623,8 @@ section.normal h3 span{
 #doctors ul li .desc{
   background: #dad1cd;
   padding: 10px;
+  height: 69%;
+  max-width: 100%;
 }
 #doctors ul li .desc .name{
   text-align: center;
@@ -642,6 +644,8 @@ section.normal h3 span{
   padding: 10px;
   font-size: 14px;
   line-height: 1.5;
+  height: 87%;
+  max-height: 100%;
 }
 #doctors ul li .desc .tit{
   margin: 5px;
@@ -695,13 +699,13 @@ section.normal h3 span{
   font-size: 18px;
   padding: 10px 0;
 }
-#price table th.futan1{
+#price table th.hu1{
   background: #e8e3e0;
 }
-#price table th.futan2{
+#price table th.hu2{
   background: #d9d0cb;
 }
-#price table th.futan3{
+#price table th.hu3{
   background: #c5b8b0;
 }
 #price table th.midashi{
@@ -865,7 +869,7 @@ section.normal h3 span{
   border-bottom: 1px solid black;
   padding: 4px 12px;
 }
-#access .accessbox .desc li table td.maru{
+#access .accessbox .desc li table td.ma{
   color: #ffab00;
 }
 #access .accessbox .desc li table .last th,
@@ -1197,11 +1201,11 @@ footer{
     font-size: 24px;
     line-height: 1.5;
   }
-  #method .eachmethod .method1 img{
+  #method .eachmethod .methodr img{
     width: 100%;
     margin-bottom: 20px;
   }
-  #method .eachmethod .method1 .text{
+  #method .eachmethod .methodr .text{
     width: 100%;
   }
   #method .eachmethod .brown{
@@ -1210,9 +1214,6 @@ footer{
   }
   #method .eachmethod .brown br{
     display: none;
-  }
-  #method .eachmethod.method4 ul{
-    padding-left: 15px;
   }
   #method .eachmethod.sponly img{
     width: 100%;
@@ -1240,6 +1241,7 @@ footer{
   #doctors ul li{
     width: 100%;
     margin-bottom: 20px;
+    height: 80%;
   }
   #doctors ul li .desc .name{
     font-size: 24px;
@@ -1275,6 +1277,7 @@ footer{
     width: 90%;
     margin: 40px auto;
     max-width: 450px;
+    height: auto;
   }
   #flow #flow-slider2 .slick-prev, 
   #flow #flow-slider2 .slick-next {
