@@ -27,43 +27,10 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
-  <header>
-    <div class="pconly">
-      <a href="https://mymc.jp/" class="logo">
-        <img src="img/pc/アセット 1@3x.png" alt="プレジデント倶楽部">
-      </a>
-      <ul>
-        <li ><a href="">プレジデント倶楽部について</a></li>
-        <li><a href="">イベント予定</a></li>
-        <li><a href="">イベント報告記</a></li>
-        <li><a href="">会員特典</a></li>
-        <li><a href="">会員企業紹介</a></li>
-      </ul>
-    </div>
-    <div class="sponly">
-      <a href="https://mymc.jp/" class="logo">
-        <img src="img/sp/アセット 1@3x.png" alt="プレジデント倶楽部">
-      </a>
-      <div class="menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <div class="open-menu">
-        <ul>
-          <div class="close">✕</div>
-          <li ><a href="">プレジデント倶楽部について</a></li>
-          <li><a href="">イベント予定</a></li>
-          <li><a href="">イベント報告記</a></li>
-          <li><a href="">会員特典</a></li>
-          <li><a href="">会員企業紹介</a></li>
-        </ul>
-      </div>
-    </div>
-  <div id="site-header-placeholder"></div>
+  <div id="header"></div>
     <main>
       <section id="fv">
-          <h1>
+        <h1>
           <img src="./img/pc/アセット 2@3x.png" alt="" class="pconly">
           <div class="fvctabox pconly">
             <div class="fvcta pconly">
@@ -71,7 +38,6 @@
                 <a href="#form"><img src="./img/pc/アセット 3@3x.png" alt="WEB予約はこちら"></a>
                 <a href="tel:08075042450"><img src="./img/pc/アセット 4@3x.png" alt="電話予約はこちら"></a>
               </div>
-              <img src="./img/fvtext-2.png" alt="完全予約制ではなく飛び込み受診も可能ですので、まずはお電話を！" class="text2">
             </div>
           </div>
           <img src="./img/fv-sp.png" alt="日帰り！痛みの少ない鼠径ヘルニア手術" class="sponly">
@@ -85,6 +51,97 @@
           <p class="chui">完全予約制ではなく飛び込み受診も可能ですので、<br>まずはお電話を！</p>
         </div>
       </section>
+      <section id="schedule" class="normal">
+        <h2>
+          <span>イベント予定</span>
+          <img src="./img/pc/アセット 5@3x.png" alt="EVENT">
+        </h2>
+        <ul id="schedule-slider" class="pconly">
+          <li class="part">
+            <h4><img src="./img/pc/アセット 6@3x.png" alt="new">第8回プレジデント倶楽部<br>経営者会</h4>
+            <img src="./img/pc/アセット 11@3x.png" alt="">
+            <p>
+              <span>開催日</span>2025年9月30日<br>
+              <span>時　間</span>調整中<br>
+              <span>場　所</span>YML<br>
+              <a href="link"><img src="./img/pc/アセット 7@3x.png" alt=""></a>
+            </p>
+          </li>
+          <li class="part">
+            <h4>第8回プレジデント倶楽部<br>経営者会</h4>
+            <img src="./img/pc/アセット 11@3x.png" alt="">
+            <p>
+              <span>開催日</span>2025年9月30日<br>
+              <span>時　間</span>調整中<br>
+              <span>場　所</span>YML<br>
+              <a href="link"><img src="./img/pc/アセット 7@3x.png" alt=""></a>
+            </p>
+          </li>          
+          <li class="part">
+            <h4>第8回プレジデント倶楽部<br>経営者会</h4>
+            <img src="./img/pc/アセット 11@3x.png" alt="">
+            <p>
+              <span>開催日</span>2025年9月30日<br>
+              <span>時　間</span>調整中<br>
+              <span>場　所</span>YML<br>
+              <a href="link"><img src="./img/pc/アセット 7@3x.png" alt=""></a>
+            </p>
+          </li>          
+          <li class="part">
+            <h4>第8回プレジデント倶楽部<br>経営者会</h4>
+            <img src="./img/pc/アセット 11@3x.png" alt="">
+            <p>
+              <span>開催日</span>2025年9月30日<br>
+              <span>時　間</span>調整中<br>
+              <span>場　所</span>YML<br>
+              <a href="link"><img src="./img/pc/アセット 7@3x.png" alt=""></a>
+            </p>
+          </li>          
+          <li class="part">
+            <h4>第8回プレジデント倶楽部<br>経営者会</h4>
+            <img src="./img/pc/アセット 11@3x.png" alt="">
+            <p>
+              <span>開催日</span>2025年9月30日<br>
+              <span>時　間</span>調整中<br>
+              <span>場　所</span>YML<br>
+              <a href="link"><img src="./img/pc/アセット 7@3x.png" alt=""></a>
+            </p>
+          </li>
+        </ul>
+        <ul id="flow-slider2" class="sponly">
+          <li class="flowpart">
+            <h4><span>01</span>診察予約</h4>
+            <img src="./img/flow1.png" alt="">
+            <p>
+              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
+              <a href="#form" style="margin-top: 60px;"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
+              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>02</span>診察</h4>
+            <img src="./img/flow2.png" alt="">
+            <p>
+              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>03</span>手術当日</h4>
+            <img src="./img/flow3.png" alt="">
+            <p>
+              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
+            </p>
+          </li>
+          <li class="flowpart">
+            <h4><span>04</span>術後診察</h4>
+            <img src="./img/flow4.png" alt="">
+            <p>
+              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
+            </p>
+          </li>
+        </ul>
+      </section>
+
       <section id="about" class="normal">
           <h2><span>鼠径ヘルニア</span>とは？</h2>
           <div class="title_en">WHAT</div>
@@ -495,110 +552,6 @@
             <p class="chui">完全予約制ではなく飛び込み受診も可能ですので、<br>まずはお電話を！</p>
           </div>
         </section>
-      <section id="flow" class="normal">
-        <h2><span>日帰り手術</span>の<span>流れ</span></h2>
-        <div class="title_en">FLOW</div>
-        <h3><span>鼠径ヘルニア手術</span>の<span>流れ</span></h3>
-        <p>
-        当院の日帰り手術の流れを、初診から手術に至るまで説明します。<br>
-        ご来院頂くのは、基本的には手術前診察（初診）と手術時の２回になります。<br>
-        術後は必ずしもご来院頂く必要はありませんが、患者さまからご希望があれば診察可能な体制を整えております。<br>
-        </p>
-        <ul id="flow-slider" class="pconly">
-          <li class="flowpart">
-            <h4><span>01</span>診察予約</h4>
-            <img src="./img/flow1.png" alt="">
-            <p>
-              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
-              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
-              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>02</span>診察</h4>
-            <img src="./img/flow2.png" alt="">
-            <p>
-              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>03</span>手術当日</h4>
-            <img src="./img/flow3.png" alt="">
-            <p>
-              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>04</span>術後診察</h4>
-            <img src="./img/flow4.png" alt="">
-            <p>
-              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>01</span>診察予約</h4>
-            <img src="./img/flow1.png" alt="">
-            <p>
-              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
-              <a href="#form"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
-              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>02</span>診察</h4>
-            <img src="./img/flow2.png" alt="">
-            <p>
-              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>03</span>手術当日</h4>
-            <img src="./img/flow3.png" alt="">
-            <p>
-              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>04</span>術後診察</h4>
-            <img src="./img/flow4.png" alt="">
-            <p>
-              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
-            </p>
-          </li>
-        </ul>
-        <ul id="flow-slider2" class="sponly">
-          <li class="flowpart">
-            <h4><span>01</span>診察予約</h4>
-            <img src="./img/flow1.png" alt="">
-            <p>
-              まずはご来院いただき、<span>診察をしてから手術のご予約をいただく</span>形になっています。
-              <a href="#form" style="margin-top: 60px;"><img src="./img/cta-web.png" alt="WEB予約はこちら"></a>
-              <a href="tel:08075042450"><img src="./img/cta-tel.png" alt="電話予約はこちら"></a>
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>02</span>診察</h4>
-            <img src="./img/flow2.png" alt="">
-            <p>
-              ご来院いただき、問診票をご記⼊いただきます。<br>当院での⽇帰り⼿術をご希望で、医師により⼿術適応の有無を診断いたします。<br><span>手術前検査として、すべての方に血液検査、胸部レントゲン検査、心電図検査、心臓機能検査をお受けいただきます。</span>状況によってCT検査を提携先医院にて行います。紹介状をお持ちの患者さまで、すでにお済みの検査がある場合、当院では重複する検査は行いません。<br>その後、⼿術についてのご案内をさせていただいた後、⼿術⽇の予約をしてお帰りいただきます。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>03</span>手術当日</h4>
-            <img src="./img/flow3.png" alt="">
-            <p>
-              当⽇の朝は、<span>お⾷事をとらずにお越しいただき</span>、まずは⼿術前に体調のチェックを行った後手術を行います。<br>⼿術後はリカバリールームでお休みいただき、お会計が済みましたらご帰宅いただけます（⼿術後平均60分程度）。
-            </p>
-          </li>
-          <li class="flowpart">
-            <h4><span>04</span>術後診察</h4>
-            <img src="./img/flow4.png" alt="">
-            <p>
-              ⼿術翌⽇以降に、術後の状態を確認させていただきます。<br>手術翌日は担当医師より電話連絡させいただきます。<span>術後経過や傷の痛みなどに関して、医師と相談すること可能です。</span><br>1週間後に再度ご来院いただき、創部の確認、術後経過が問題がないか確認をさせていただきます。
-            </p>
-          </li>
-        </ul>
-      </section>
       <section id="access" class="normal">
         <h2><span>アクセス</span></h2>
         <div class="title_en">ACCESS</div>
@@ -721,132 +674,8 @@
           </li>
         </ul>
       </section>
-      <section id="form" class="normal">
-        <h2><span>ご予約フォーム</span></h2>
-        <div class="title_en">CONTACT</div>
-        <form action="./confirm.php" method="post" class="inner">
-          <div class="formpart">
-            <div class="formname">
-              <div>お名前</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput">
-              <input type="text" name="fullname" placeholder="山田太郎" required>
-            </div>
-          </div>
-          <div class="formpart">
-            <div class="formname">
-              <div>電話番号</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput">
-              <input type="tel" name="tel" placeholder="09012345678" required>
-            </div>
-          </div>
-          <div class="formpart">
-            <div class="formname">
-              <div>メールアドレス</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput">
-              <input type="email" name="mail" placeholder="example@mymc.jp" required>
-              <p>
-                ※gmail、yahoo メール等のアドレスを推奨させていただいております。<br>
-                ※icloud メールの場合、正常に受信ができない場合がございます。迷惑メールフォルダをご確認いただき、迷惑メールでないと設定をお願いいたします。
-              </p>
-            </div>
-          </div>
-          <div class="formpart">
-            <div class="formname">
-              <div>生年月日</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput">
-              <input type="text" name="birth" placeholder="1980/06/15" class="birth" required>
-            </div>
-          </div>
-          <div class="formpart">
-            <div class="formname">
-              <div>ご予約希望日時　(第１希望)</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput hope">
-              <input type="text" name="hopeday1" placeholder="日付を選択" class="hopeday" required>
-              <select name="hopetime1" required>
-                <option value="" selected disabled>時間を選択</option>
-                <option value="8:30~">8:30~</option>
-                <option value="9:00~">9:00~</option>
-                <option value="9:30~">9:30~</option>
-                <option value="10:00~">10:00~</option>
-                <option value="10:30~">10:30~</option>
-                <option value="11:00~">11:00~</option>
-                <option value="11:30~">11:30~</option>
-                <option value="12:00~">12:00~</option>
-                <option value="13:30~">13:30~</option>
-                <option value="14:00~">14:00~</option>
-                <option value="14:30~">14:30~</option>
-                <option value="15:00~">15:00~</option>
-                <option value="15:30~">15:30~</option>
-                <option value="16:00~">16:00~</option>
-                <option value="18:00~">18:00~</option>
-                <option value="18:30~">18:30~</option>
-                <option value="19:00~">19:00~</option>
-                <option value="19:30~">19:30~</option>
-              </select>
-            </div>
-            <div class="formname">
-              <div>ご予約希望日時　(第２希望)</div>
-              <div class="require">必須</div>
-            </div>
-            <div class="forminput hope">
-              <input type="text" name="hopeday2" placeholder="日付を選択" class="hopeday" required>
-              <select name="hopetime2" required>
-                <option value="" selected disabled>時間を選択</option>
-                <option value="8:30~">8:30~</option>
-                <option value="9:00~">9:00~</option>
-                <option value="9:30~">9:30~</option>
-                <option value="10:00~">10:00~</option>
-                <option value="10:30~">10:30~</option>
-                <option value="11:00~">11:00~</option>
-                <option value="11:30~">11:30~</option>
-                <option value="12:00~">12:00~</option>
-                <option value="13:30~">13:30~</option>
-                <option value="14:00~">14:00~</option>
-                <option value="14:30~">14:30~</option>
-                <option value="15:00~">15:00~</option>
-                <option value="15:30~">15:30~</option>
-                <option value="16:00~">16:00~</option>
-                <option value="18:00~">18:00~</option>
-                <option value="18:30~">18:30~</option>
-                <option value="19:00~">19:00~</option>
-                <option value="19:30~">19:30~</option>
-              </select>
-            </div>
-            <div class="formname">
-              <div>ご予約希望日時　(第３希望)</div>
-              <div class="require">必須</div>
-            </div>
-          </div>
-          <div class="formpart" style="border-bottom: none;">
-            <div class="formname">
-              <div>備考</div>
-            </div>
-            <div class="forminput">
-              <textarea name="other" placeholder="ご質問・ご要望などがございましたらご記入ください。"></textarea>
-            </div>
-          </div>
-          <p>
-            ご予約は確定ではありません。<br>ご予約確定につきましては、<br class="sponly">追ってご連絡差し上げます。
-          </p>
-          <div class="policy">
-            <label for="agree"><input type="checkbox" id="agree" required><a href="https://mymc.jp/privacypolicy/" target="_blank">プライバシーポリシー</a>に同意する</label>
-          </div>
-          <input type="submit" value="入力内容のご確認">
-        </form>
-      </section>
     </main>
-    <footer>
-      Copyright © mymedical clinic.
-    </footer>
+  <div id="footer"></div>
+  <script src="innerHF.js"></script>
 </body>
 </html>
