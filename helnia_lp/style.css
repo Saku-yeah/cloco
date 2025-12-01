@@ -1277,7 +1277,7 @@ footer{
     width: 90%;
     margin: 40px auto;
     max-width: 450px;
-    height: auto;
+    height: 100%;
   }
   #flow #flow-slider2 .slick-prev, 
   #flow #flow-slider2 .slick-next {
