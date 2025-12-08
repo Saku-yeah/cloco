@@ -9,10 +9,14 @@ body{
   background: #000000;
   color: #333333;
   line-height: 1.6;
+  max-width: 100%;
 }
 img{
   max-width: 100%;
   height: auto;
+}
+.sponly{
+  display: none;
 }
 ul,li{
   list-style: none !important;
@@ -39,7 +43,7 @@ a:hover {
     text-decoration: none;
     border-radius: 50px;
     font-size: 40px;
-    margin: 0 auto;
+    margin: 50px auto 50px;
 }
 /* ---  ヘッダー用 --- */
 header{
@@ -59,38 +63,37 @@ header .pconly{
   max-width: 1800px;
   padding-top: 10px;
 }
-header .pconly .logo{
-  display: block;
-}
+
 header .pconly .logo img{
-  height: 60px;
+  max-width: 50%;
 }
 header .pconly .btn{
   display: block;
 }
-header .pconly .btn img{
-  height: 60px;
-}
+
 header .pconly ul{
   display: flex;
   justify-content: center;
+  width: 60%;
 }
 header .pconly ul li{
-  text-align: center;
+  margin: 0 auto;
   font-size: 12px;
   padding: 0 12px;
-  border-right: 1px solid;
   font-weight: bold;
 }
-header .pconly ul li.top{
-  padding-top: 6px;
-}
-header .pconly ul li a{
-  color: #71513e;
+/* --- ヘッダーリンクの基本スタイル --- */
+header .pconly ul li a {
+  color: #FFFFFF; /* デフォルトのリンク色を白に設定 */
   text-decoration: none;
 }
-header .pconly ul .tate{
-  border-left: 1px solid #71513e;
+
+/* --- アクティブページ（現在地）のスタイル --- */
+/* JavaScriptで付与するクラス */
+header .pconly ul li.current-page a {
+  color: gold; /* アクティブなリンク色を金色に設定 */
+  /* 必要に応じて下線や装飾を追加 */
+  /* border-bottom: 2px solid gold; */
 }
 
 /* ---FV用--- */
@@ -103,9 +106,9 @@ header .pconly ul .tate{
 }
 #fv h1 .fvcta{
   position: fixed;
-  right: 5%;
+  right: 10%;
   bottom: 0%;
-  width: 15%;
+  width: 150px;
   height: auto;
   z-index: 1000;
 }
@@ -124,7 +127,7 @@ section.normal{
 section .section-title img {
   display: block;
   width: 250px;
-  margin: 0 auto 50px;
+  margin: 50px auto 50px;
 }
 section.normal h2{
   text-emphasis: center;
@@ -185,42 +188,31 @@ section .inner{
 }
 
 /* --- schedule用 --- */
-#schedule h2 img {
-    display: block;
-    width: 200px;
-    margin: 0 auto 40px;
-}
-#schedule .schedule-slider {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 40px;
-}
-#schedule .part {
-  position: relative;
-  background-color: #FFFFFF; /* カードの背景を白に */
-  border-radius: 20px;
-  width: 300px; /* カードの標準的な幅 (スライダー設定により変動) */
-  margin: 10px; /* カード間の間隔 */
-  padding-bottom: 20px;
-  text-align: left;
-}
+
 #schedule .card-title {
   display: flex;
   align-items: center;
   font-size: 20px;
   padding: 10px 10px 20px;
 }
-#schedule .new-badge img {
-  display: block;
-  height: 20px;
-}
-#schedule .card-title .card-title-text {
+#schedule .new ::before {
+  content : '';
   display: inline-block;
+  width: 30px;/*画像の幅*/
+  height: 30px;/*画像の高さ*/
+  background-image: url('./img/pc/アセット 6@3x.png');
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+#schedule .card-title-text {
+  display: block;
   text-align: center;
 }
 #schedule .card-image img {
     display: block;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: auto;
 }
 #schedule .card-details {
@@ -234,7 +226,9 @@ section .inner{
 #schedule .card-details span {
     font-weight: bold;
     display: inline-block;
-    width: 60px; /* ラベルの幅を固定 */
+    border: solid 2px #000;
+    margin: 8px 8px 0 0;
+    padding: 2px 6px;
 }
 .custom-dots {
   display: flex;
@@ -253,57 +247,65 @@ section .inner{
   background: coral;
 }
 #schedule .schedule-slider  {
-  height: auto;
-  opacity: .3;
-  transform: scale(.8);
-  transition: opacity .5s, transform .5s;
+  padding: 0;
+  margin: 0 auto 60px; /* 下部に余白 */
   width: 100%;
 }
-#schedule .schedule-slider .slick-center li {
-  opacity: 1;
-  transform: scale(1);
+#schedule .part {
+  position: relative;
+  background-color: #FFFFFF; /* カードの背景を白に */
+  border-radius: 20px;
+  width: 300px; /* カードの標準的な幅 (スライダー設定により変動) */
+  margin: 10px; /* カード間の間隔 */
+  padding-bottom: 20px;
+  text-align: left;
+}
+#schedule .part a::after {
+    content: '◢'; /* または適切な特殊文字/画像 */
+    color: gold; /* または黄色の強い色 */
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    transform: translateY(-50%);
+}
+#schedule::before {
+    left: 0;
+    /* 黒のグラデーションを半透明から透明へ */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+}
+#schedule::after {
+    right: 0;
+    /* 黒のグラデーションを半透明から透明へ */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.event-slider .slick-center {
+    /* 中央の要素を拡大 */
+    transform: scale(1.5); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
+/* --- ドットナビゲーションの位置調整 --- */
+/* ドット全体（.slick-dots）を左寄せにする */
 .slick-dots {
-    overflow: hidden;
-    width: 100%; /*ポイント*/
-    padding: 0;
+    bottom: -40px; /* 位置を下に調整 */
     margin: 0;
-    list-style: none;
-    text-align: center;/*ポイント*/
-    margin-top: 15px;
 }
 .slick-dots li {
-  position: relative;
-  display: inline-block; /*ポイント*/
-  margin: 0 7px;
-  max-width: 13px;
-  padding: 0;
-  color: #fff;
-  border: 1px solid #707070;
-  width: 13px;
-  height: 13px;
-  border-radius: 100%;
-  cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
 }
-#schedule  .list {
-    display: flex;
-    flex-wrap: wrap; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 80%;
+.slick-dots li button:before {
+    /* ドットの見た目を調整 */
+    color: whitesmoke !important;
+    font-size: 20px;
+    opacity: 1;
 }
-#schedule  .list li {
-    /* 3. 各要素の幅を全体の 1/3 (33.333...) に設定 */
-    width: 25%; 
-    
-    /* 要素間の隙間を設定したい場合は、以下の box-sizing を利用 */
-    /* box-sizing: border-box; */
-    /* padding: 10px; */
-    padding: 20px 0;
-    border: 1px solid #ccc; 
-    box-sizing: border-box;
+.slick-dots li.slick-active button:before {
+    color: #fff !important; /* アクティブなドットの色 */
+    font-size: 20px;
+    opacity: 1;
 }
 
 /* --- report用 --- */
@@ -333,6 +335,22 @@ section .inner{
 #report .content-body p {
     text-align: left;
 }
+
+/* --- benefit用 --- */
+#benefit{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+/* --- company用 --- */
+#company{
+  background-image: url('./img/pc/アセット 16@3x.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
 
 /* --- PC版レイアウトの切り替え (例: 768px以上) --- */
 @media (min-width: 768px) {
@@ -406,19 +424,17 @@ section .inner{
   display: block;
   margin: 0 auto 20px;
 }
+#news-list .part:first-child {
+    border-top: 1px solid #fff;
+}
 #news-list .part {
     padding: 20px 0;
-    border-top: 1px solid #fff; /* 上部の薄い線 */
-}
-#news-list .part:last-child {
     border-bottom: 1px solid #fff;
-}
-#news-list .part:first-child {
-    border-top: none; 
+    margin-bottom: 20px;
 }
 #news-list .part .title {
     font-size: 30px;
-    color: #FFFFFF;
+    color: whitesmoke !important;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -439,7 +455,7 @@ section .inner{
     padding-right: 15px; /* 三角形のためのスペース */
 }
 #news-list .part p a::after {
-    content: '▲'; /* または適切な特殊文字/画像 */
+    content: '◢'; /* または適切な特殊文字/画像 */
     color: gold; /* または黄色の強い色 */
     font-size: 8px;
     position: absolute;
@@ -490,7 +506,7 @@ footer div{
   border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* 中央の薄い線 */
 }
 footer div a{
-  font-size: 30px;
+  font-size: 25px;
   padding: 20px 20px 20px 20px;
   margin: auto; /* リンク間の間隔 */
   white-space: nowrap; /* 折り返しを防ぐ */
@@ -502,10 +518,46 @@ footer p{
   color: #FFFFFF;
 }
 
+/* --- eveSche用 ---*/
+.schedule-list {
+    display: flex;
+    flex-wrap: wrap;       /* 要素を折り返す設定 */
+    justify-content: left; /* リスト全体を中央揃えにする */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px; /* PC版での最大幅を仮定 */
+    background-image: url('./img/pc/アセット 16@3x.png');
+}
+
+/* --- 子要素: li.part の基本設定と間隔 --- */
+.schedule-list .part {
+    box-sizing: border-box; /* paddingやborderをwidthに含める */
+    padding: 10px;          /* カード間の隙間として利用 */
+    margin-bottom: 20px;    /* 行間のスペース */
+    margin: 0 auto;
+}
+
+/* 1行目の要素 (1, 2, 3番目) の幅設定 */
+.schedule-list .part:nth-child(-n + 3) {
+    /* 幅を 1/3 に設定し、1行に3つ配置する */
+    width: 33.333%; 
+}
+
+/* 2行目の要素 (4, 5番目) の幅設定 */
+.schedule-list .part:nth-child(n + 4):nth-child(-n + 5) {
+    /* 幅を 1/2 に設定し、2行に2つ配置する */
+    width: 50%; 
+}
+
+
 /* --- スマホ用 --- */
 @media (max-width: 768px){
   .pconly{
     display: none !important;
+  }
+  .sponly{
+    display: block;
   }
   header{
     height: 60px;
@@ -642,336 +694,5 @@ footer p{
   section.normal h3 span{
     font-size: 28px;
   }
-  #about .eachworry{
-    margin-bottom: 20px;
-  }
-  #about .eachworry .worrybox{
-    padding: 10px;
-    margin-bottom: 120px;
-  }
-  #about .eachworry .worrybox img.worry{
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #about .eachworry .worrybox ul{
-    width: 100%;
-  }
-  #about .eachworry .worrybox ul li::before{
-    width: 22px;
-    height: 22px;
-  }
-  #about .eachworry .worrybox img.person{
-    width: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -18%;
-  }
-  #about .eachworry .aboutbox .text{
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #about .eachworry .aboutbox img{
-    width: 100%;
-  }
-  #about .eachworry.type > p{
-    text-align: left;
-    line-height: 2;
-    margin-bottom: 10px;
-  }
-  #about .eachworry.type ul li{
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
-  }
-  #about .eachworry.type ul li h4 div{
-    font-size: 24px;
-    line-height: 1.5;
-  }
-  #method .eachmethod .methodr img{
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #method .eachmethod .methodr .text{
-    width: 100%;
-  }
-  #method .eachmethod .brown{
-    padding: 10px;
-    text-align: left;
-  }
-  #method .eachmethod .brown br{
-    display: none;
-  }
-  #method .eachmethod.sponly img{
-    width: 100%;
-  }
-  #method .eachmethod.sponly .waku{
-    border: 1px solid #c6ece6;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  #features > p{
-    text-align: left;
-    width: 90%;
-    max-width: 450px;
-    margin: auto;
-  }
-  #features > p br{
-    display: none;
-  }
-  #features ul li{
-    width: 100%;
-  }
-  #doctors ul{
-    max-width: 450px;
-  }
-  #doctors ul li{
-    width: 100%;
-    margin-bottom: 20px;
-    height: 80%;
-  }
-  #doctors ul li .desc .name{
-    font-size: 24px;
-    margin: 20px 0;
-  }
-  #doctors ul li .desc .career{
-    font-size: 16px;
-  }
-  #doctors ul li .desc .content.small{
-    font-size: 14px;
-  }
-  #doctors .masuibox{
-    flex-wrap: wrap;
-  }
-  #doctors .masuibox img{
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  #doctors .masuibox .text{
-    width: 100%;
-  }
-  #price table{
-    margin-bottom: 20px;
-  }
-  #flow > p{
-    text-align: left;
-    width: 90%;
-    max-width: 450px;
-    margin: auto;
-    font-size: 16px;
-  }
-  #flow #flow-slider2{
-    width: 90%;
-    margin: 40px auto;
-    max-width: 450px;
-    height: auto;
-  }
-  #flow #flow-slider2 .slick-prev, 
-  #flow #flow-slider2 .slick-next {
-    width: 35px;
-    height: 35px;
-    background-size: contain;
-    position: absolute;
-    top: 35%;
-    z-index: 10;
-    cursor: pointer;
-  }
-  #flow #flow-slider2 .slick-prev {
-    background: url('./img/left.png') no-repeat center;
-    left: -2%;
-    background-size: contain;
-  }
-  #flow #flow-slider2 .slick-next {
-    background: url('./img/right.png') no-repeat center;
-    right: -2%;
-    background-size: contain;
-  }
-  #flow  #flow-slider2 .slick-prev::before, 
-  #flow  #flow-slider2 .slick-next::before {
-    display: none;
-  }
-  #access .accessbox #access-slider .slick-dots li button:before{
-    font-size: 6px;
-  }
-  #access .accessbox #access-slider{
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  #access .accessbox .desc{
-    width: 100%;
-  }
-  #access .accessbox .desc li table th,
-  #access .accessbox .desc li table td{
-    padding: 4px 8px;
-  }
-  #qa ul li h3{
-    text-align: center;
-    font-size: 16px;
-    padding: 15px 10px 35px;
-    line-height: 1.5;
-  }
-  #qa ul li h3 img{
-    left: 50%;
-    transform: translateX(-50%);
-    top: auto;
-    bottom: 10px;
-  }
-  #qa ul li.open img{
-    transform: translateX(-50%) rotate(180deg);
-  }
-  #qa ul li p{
-    padding: 10px;
-  }
-  #form form{
-    padding: 30px 20px;
-    width: 80%;
-  }
-  #form form .formpart .formname{
-    width: 100%;
-    margin-bottom: 15px;
-    position: static;
-    justify-content: flex-start;
-    column-gap: 10px;
-    font-size: 16px;
-  }
-  #form form .formpart .forminput{
-    width: 100%;
-  }
-  #form form .formpart .forminput.hope input,
-  #form form .formpart .forminput.hope select{
-    width: 46%;
-  }
-  #form form > p{
-    font-size: 18px;
-    line-height: 1.5;
-    margin-top: -20px;
-  }
-  #form form .policy{
-    font-size: 16px;
-  }
-  #form form .policy input{
-    transform: scale(1.2);
-    margin-right: 0.5em;
-  }
 }
 
-@media (min-width: 769px){
-  .sponly{
-    display: none !important;
-  }
-}
-
-#confirm{
-  margin-top: 80px;
-}
-#confirm #form form .formpart .forminput{
-  font-size: 18px;
-  position: relative;
-  top: 8px;
-  font-family: none;
-}
-#confirm #form form .formpart .forminput.hope{
-  margin-bottom: 25px;
-}
-#confirm .submit{
-  display: flex;
-  justify-content: center;
-  column-gap: 30px;
-  align-items: center;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-#confirm .submit .syusei{
-  cursor: pointer;
-  text-align: center;
-  width: 10em;
-  display: block;
-  font-size: 24px;
-  padding: 15px 0;
-  border: 1px solid #cbcbcb;
-  background: white;
-  color: black;
-}
-#confirm .submit .syusei:hover{
-  background: #f5f5f5;
-}
-#confirm  #form form input[type="submit"]{
-  margin: 0;
-}
-
-@media (max-width: 768px){
-  #confirm{
-    margin-top: 60px;
-  }
-  #confirm .submit{
-    flex-direction: column-reverse;
-  }
-  #confirm #form form input[type="submit"]{
-    margin-bottom: 20px;
-  }
-}
-
-#thanks{
-  margin-top: 80px;
-}
-#thanks .thanks{
-  padding: 60px 0;
-  width: 90%;
-  margin: auto;
-}
-#thanks .thanks h1{
-  text-align: center;
-  font-size: 32px;
-  font-family: serif;
-  margin-bottom: 20px;
-}
-#thanks .thanks p{
-  text-align: center;
-  font-size: 18px;
-  font-family: serif;
-  line-height: 1.5;
-}
-#thanks .thanks p a{
-  cursor: pointer;
-  text-align: center;
-  width: 10em;
-  display: block;
-  margin: 20px auto;
-  font-size: 24px;
-  padding: 15px 0;
-  color: white;
-  background: #71513e;
-  border: 1px solid #71513e;
-  text-decoration: none;
-  border-radius: 20px;
-}
-#thanks .thanks p a:hover{
-  color: #71513e;
-  background: white;
-}
-.thanks-footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-@media (max-width: 768px){
-  #thanks{
-    margin-top: 60px;
-  }
-  #thanks .thanks{
-    padding: 20px 0;
-    max-width: 450px;
-  }
-  #thanks .thanks h1{
-    font-size: 18px;
-  }
-  #thanks .thanks p{
-    font-size: 14px;
-    text-align: left;
-  }
-  #thanks .thanks p a{
-    font-size: 18px;
-    padding: 10px 0;
-  }
-}
