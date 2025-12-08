@@ -3,7 +3,8 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: serif;
+  font-weight: 700;
 }
 body{
   background: #000000;
@@ -81,16 +82,15 @@ header .pconly ul li{
   font-size: 12px;
   padding: 0 12px;
   font-weight: bold;
+  white-space: nowrap;
 }
 /* --- ヘッダーリンクの基本スタイル --- */
-header .pconly ul li a {
+header .pconly ul li a{
   color: #FFFFFF; /* デフォルトのリンク色を白に設定 */
   text-decoration: none;
 }
 
-/* --- アクティブページ（現在地）のスタイル --- */
-/* JavaScriptで付与するクラス */
-header .pconly ul li.current-page a {
+header .pconly ul li a.current{
   color: gold; /* アクティブなリンク色を金色に設定 */
   /* 必要に応じて下線や装飾を追加 */
   /* border-bottom: 2px solid gold; */
@@ -197,6 +197,7 @@ section .inner{
 }
 #schedule .new ::before {
   content : '';
+  left: -10px;
   display: inline-block;
   width: 30px;/*画像の幅*/
   height: 30px;/*画像の高さ*/
@@ -315,92 +316,24 @@ section .inner{
   background-position: center center;
   background-size: 100% auto;
 }
-#report .box {
-    flex-direction: column; /* 要素を縦に並べる */
+#report .box{
+  display: flex;
+  align-items: center;
 }
-#report .box-title {
-    text-align: center;
-    margin-bottom: 10px;
+#report .box .left {
+  width: 65%;
+  margin: 20px;
 }
-#report .box-title img {
-    display: block;
-    margin: 10px auto; /* h3内の画像を中央に配置 */
-    width: 80%; /* SP版での幅調整 */
-    height: auto;
+#report .box .left h3 {
+  font-size: 18px;
+  margin: 10px;
 }
-#report .content-body h4 {
-    text-align: left;
-    margin-top: 10px;
-}
-#report .content-body p {
-    text-align: left;
-}
-
-/* --- benefit用 --- */
-#benefit{
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
-}
-
-/* --- company用 --- */
-#company{
-  background-image: url('./img/pc/アセット 16@3x.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% auto;
+#report .content-body {
+  width: 30%;
+  margin-top: 30px;
 }
 
 
-/* --- PC版レイアウトの切り替え (例: 768px以上) --- */
-@media (min-width: 768px) {
-    
-    #report .box {
-        /* PC版ではh3とh4/pブロックを横に並べる */
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: flex-start; /* 上端揃え */
-    }
-
-    /* 左右の要素の幅調整 */
-    #report .box-title {
-        width: 35%; /* h3ブロック（左側）の幅 */
-        text-align: left; /* テキスト左寄せに戻す */
-    }
-
-    #report .content-body {
-        width: 60%; /* h4とpブロック（右側）の幅 */
-    }
-    
-    /* PC版のh3の画像とテキストの配置調整 */
-    #report .box-title {
-        display: flex;
-        flex-direction: column;
-        /* h3のテキストと画像を縦に並べる */
-    }
-
-    /* h3内の画像の位置調整: h3のテキストの下に配置（HTMLの順序通り） */
-    #report .box-title img {
-        order: 2; /* 順序を2番目にして下に来るようにする */
-        width: 100%;
-        margin: 15px 0 0; /* マージン調整 */
-    }
-    
-    /* h3のテキスト（h3直下のテキストノード）はorder: 1 (デフォルト) */
-    
-    /* h4, p は縦に並んだまま（Flexboxのデフォルト） */
-    #report .content-body {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #report .content-body h4 {
-        order: 1; /* h4がpの上に配置されることを確認 */
-    }
-    #report .content-body p {
-        order: 2;
-    }
-}
 /* --- news用 --- */
 #news{
   background-image: url('./img/pc/アセット 12@3x.png');
@@ -474,6 +407,170 @@ section .inner{
   font-size: large;
 }
 
+
+/* --- benefit用 --- */
+#benefit{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+#benefit .box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#benefit .box h3 {
+  margin-bottom: 20px; /* 下にスペース */
+  text-align: left;
+  width: 100%; /* 幅いっぱいにする */
+}
+#benefit .box h3 span {
+  font-size: 30px;
+  margin: 30px;
+}
+#report .box .inner-box {
+    display: flex; /* これで子要素（content-bodyとright）が横並びになる */
+    width: 100%; /* .boxの幅いっぱいに広げる */
+    align-items: flex-start; /* 縦方向の上端揃え */
+    gap: 20px; /* 左右の要素間に隙間 */
+}
+#benefit .box .content-body {
+  width: 35%;
+  margin-top: 30px;
+}
+#benefit .box .right {
+  width: 60%;
+  margin: 10px;
+}
+
+
+/* --- company用 --- */
+#company{
+  background-image: url('./img/pc/アセット 16@3x.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+#company .box {
+  flex-direction: column;
+}
+#company .header-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+#company .tagline {
+  color: #a00;
+  font-size: 14px;
+  border-left: 5px solid #a00;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+#company .center-content{
+  display: flex;
+  width: 100%;
+}
+#company .center-content .company-logo {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: 20px;
+}
+
+#company .center-content .business-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    width: 45%;
+    margin: 20px;
+}
+
+#company h3 {
+    border-bottom: #000 1px solid;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+#company .detail-title {
+    text-align: left;
+    margin-top: 0;
+}
+.website-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* --- PC版レイアウト (基本: 横並び) --- */
+@media (min-width: 769px) {
+    .profile-box {
+        display: flex; /* 左右のコンテンツを横並びにする */
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    .left-content {
+        width: 60%; /* 左側コンテンツの幅 */
+        /* PC版では会社概要(右側)のリストの前に「会社概要」のh3を表示 */
+    }
+
+    .right-content {
+        width: 40%; /* 右側コンテンツの幅 */
+        /* 右側はリスト中心 */
+    }
+    
+    /* PC版では、右側のリストから「会社概要」タイトルを非表示にする */
+    .right-content .detail-title {
+        display: none;
+    }
+}
+
+/* --- SP版レイアウト (768px以下: 縦並び) --- */
+@media (max-width: 768px) {
+    .profile-box {
+        padding: 20px; /* パディングを小さく */
+    }
+    
+    /* Flexのデフォルト設定（縦並び）に戻る */
+    .left-content,
+    .right-content {
+        width: 100%; /* 幅をフルにする */
+    }
+    
+    /* SP版では、右側のリスト（会社概要）を最上部に表示したい */
+    /* しかしHTMLの構造上、left-contentの後に right-content が来るため、
+       このままでは会社概要(右側)が下に表示されます。
+       この問題を解決するには、Flexboxの order プロパティを使用するか、
+       HTMLの構造を調整する必要があります。
+       今回はHTML構造を変更せず、縦並びで表示する基本形とします。 */
+
+    /* SP版では、左側のリスト(left-content)から「会社概要」h3を非表示にする */
+    .left-content .section-title {
+        display: none;
+    }
+    
+    /* SP版では、右側のリストの「会社概要」タイトルを表示する */
+    .right-content .detail-title {
+        display: block;
+    }
+    
+    /* DL/DT/DDの幅調整 */
+    .company-details dt, .corporate-data dt,
+    .company-details dd, .corporate-data dd {
+        width: auto;
+        display: block;
+    }
+    .company-details dt, .corporate-data dt {
+        margin-top: 5px;
+    }
+}
+
+
 /* footer用 */
 footer{
   color: white;
@@ -500,7 +597,7 @@ footer a:hover {
 footer div{
   display: flex;
   justify-content: center; /* リンクを中央に配置 */
-  width: 80%;
+  max-width: 80%;
   padding: 20px 20px 20px 20px;
   margin: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* 中央の薄い線 */
@@ -589,7 +686,6 @@ footer p{
     border-radius: 20px;
   }
   header .sponly .open-menu{
-    display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     position: fixed;
@@ -693,6 +789,35 @@ footer p{
   }
   section.normal h3 span{
     font-size: 28px;
+  }
+  .box{
+    flex-direction: column;
+  }
+  .box .right{
+    width: 100% !important;
+  }
+  .box .left{
+    width: 100% !important;
+  }  
+  .box .content-body{
+    width: 100% !important;
+  }
+  #company .center-content{
+    flex-direction: column;
+  }
+  #company .center-content .company-logo{
+    width: 100%;
+    margin: 0 auto;
+  }
+  #company .center-content .business-description{
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer .sponly{
+    background-color: none;
+    background-image: url('./img/sp/アセット 15@3x.png');
+    display: flex;
+    flex-direction: column;
   }
 }
 

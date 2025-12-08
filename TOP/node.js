@@ -16,7 +16,7 @@ $(document).ready(function(){
         centerMode: true,        // 中央のスライドを強調
         
         // ★中央のスライドをページの中心から開始 (Center padding) ★
-        centerPadding: '200px',  // 両端の余白を設定 (ここを調整して見切れ具合を制御)
+        centerPadding: '10%',  // 両端の余白を設定 (ここを調整して見切れ具合を制御)
 
         // ドット、矢印、自動再生設定
         dots: true,              // ドットナビゲーションを表示
@@ -35,41 +35,39 @@ $(document).ready(function(){
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. 現在のページの完全なURLを取得
+/**
+ * 現在のページに基づいて、<a>タグにアクティブクラスを設定する関数
+ */
+function setActiveAnchor() {
     const currentUrl = window.location.href;
-    
-    // 2. ヘッダー内の全てのリンク要素を取得
-    const navLinks = document.querySelectorAll('header .pconly ul li a');
-    
-    navLinks.forEach(link => {
-        // 3. リンクの href 属性を取得
-        const linkUrl = link.href;
+    const navLinks = document.querySelectorAll('header .pconly ul li a'); // 全ての<a>タグを取得
 
-        // 4. URLを比較
-        // 比較を簡単にするため、両端の / やインデックスファイルを除いたパスで比較するのが一般的です。
-        // ここでは、完全一致または相対パスで一致する場合をチェックします。
-        
-        // 【簡単なURL一致判定】
-        if (currentUrl.includes(linkUrl) || currentUrl.endsWith(linkUrl)) {
-            // リンクが現在のURLと一致した場合、その親の <li> 要素にクラスを追加
-            link.parentNode.classList.add('current-page');
-            
-        } 
-        
-        // 【TOPページ特別処理】
-        // index.html や TOP.html がルートURLで開かれている場合の対応
-        else if (linkUrl.endsWith('TOP.html') && currentUrl.endsWith('/')) {
-            link.parentNode.classList.add('current-page');
+    // 1. すべての<a>タグから既存の.currentクラスを削除
+    navLinks.forEach(aTag => {
+        aTag.classList.remove('current');
+    });
+
+    // 2. 現在のURLと一致する<a>タグに.currentクラスを付与
+    navLinks.forEach(aTag => {
+        if (aTag.href) {
+            // 比較用のパスを取得
+            const aHref = aTag.href.split('/').pop().split('?')[0].split('#')[0];
+            const currentPath = currentUrl.split('/').pop().split('?')[0].split('#')[0];
+
+            // URLが一致した場合
+            if (aHref === currentPath || (aHref === '' && currentPath === '')) {
+                aTag.classList.add('current'); 
+            }
         }
     });
-});
+}
 
+document.addEventListener('DOMContentLoaded', setActiveAnchor);
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const openMenu = document.querySelector(".open-menu");
-  const closeButton = document.querySelector(".close");
+  const closeButton = document.querySelector(".open-menu .close");
   const menuLinks = document.querySelectorAll(".open-menu a");
   // メニューを開く
   menu.addEventListener("click", function () {
