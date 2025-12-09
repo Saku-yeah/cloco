@@ -1,6 +1,42 @@
 fetch("header.html")
   .then((response) => response.text())
-  .then((data) => document.querySelector("#header").innerHTML = data);
+  .then((data) => {
+    // 1. headerの内容をDOMに挿入する
+    document.querySelector("#header").innerHTML = data;
+
+    // 2. ★★★ ここにハンバーガーメニューのコードを移動する ★★★
+    const menu = document.querySelector(".menu");
+    const openMenu = document.querySelector(".open-menu");
+    const closeButton = document.querySelector(".open-menu .close");
+    const menuLinks = document.querySelectorAll(".open-menu a");
+    
+    // menu要素が確実に存在することを確認してから処理を進める
+    if (menu) {
+      // メニューを開く
+      menu.addEventListener("click", function () {
+        openMenu.style.display = "block";
+        setTimeout(() => {
+          openMenu.classList.add("active");
+        }, 10);
+      });
+
+      // メニューを閉じる関数
+      function closeMenu() {
+        openMenu.classList.remove("active");
+        setTimeout(() => {
+          openMenu.style.display = "none";
+        }, 500);
+      }
+      
+      closeButton.addEventListener("click", closeMenu);
+      menuLinks.forEach(link => link.addEventListener("click", closeMenu));
+    }
+    // ★★★ ここまで移動 ★★★
+    
+    // 3. アクティブクラスの設定 (必要であればここで実行)
+    // header要素内のリンクに対して適用する必要があるため、ここで実行するのが適切
+    setActiveAnchor(); 
+  });
 
 fetch("footer.html")
   .then((response) => response.text())
@@ -18,6 +54,9 @@ $(document).ready(function(){
         // ★中央のスライドをページの中心から開始 (Center padding) ★
         centerPadding: '10%',  // 両端の余白を設定 (ここを調整して見切れ具合を制御)
 
+        autoplay: true,
+        autoplaySpeed: 3000,
+
         // ドット、矢印、自動再生設定
         dots: true,              // ドットナビゲーションを表示
         arrows: false,            // 矢印ナビゲーションを表示
@@ -29,6 +68,7 @@ $(document).ready(function(){
                     slidesToShow: 1,
                     centerPadding: '100px',
                     centerMode: true,
+                    autoplay: true,
                 }
             }
         ]
@@ -62,27 +102,3 @@ function setActiveAnchor() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', setActiveAnchor);
-// ハンバーガーメニュー
-document.addEventListener("DOMContentLoaded", function () {
-  const menu = document.querySelector(".menu");
-  const openMenu = document.querySelector(".open-menu");
-  const closeButton = document.querySelector(".open-menu .close");
-  const menuLinks = document.querySelectorAll(".open-menu a");
-  // メニューを開く
-  menu.addEventListener("click", function () {
-    openMenu.style.display = "block";
-    setTimeout(() => {
-      openMenu.classList.add("active");
-    }, 10); // 少し遅らせることでCSSのtransitionが適用される
-  });
-  // メニューを閉じる
-  function closeMenu() {
-    openMenu.classList.remove("active");
-    setTimeout(() => {
-      openMenu.style.display = "none";
-    }, 500); // transition時間と合わせる
-  }
-  closeButton.addEventListener("click", closeMenu);
-  menuLinks.forEach(link => link.addEventListener("click", closeMenu));
-});
