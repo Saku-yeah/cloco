@@ -17,6 +17,7 @@ fetch("header.html")
         openMenu.style.display = "block";
         setTimeout(() => {
           openMenu.classList.add("active");
+          menu.style.display = "none";
         }, 10);
       });
 
@@ -25,6 +26,7 @@ fetch("header.html")
         openMenu.classList.remove("active");
         setTimeout(() => {
           openMenu.style.display = "none";
+          menu.style.display = "block";
         }, 500);
       }
       
@@ -59,6 +61,7 @@ $(document).ready(function(){
 
         // ドット、矢印、自動再生設定
         dots: true,              // ドットナビゲーションを表示
+        dotsClass: 'dots-wrap',
         arrows: false,            // 矢印ナビゲーションを表示
         infinite: true,
         responsive: [
@@ -66,7 +69,7 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: '100px',
+                    centerPadding: '20%',
                     centerMode: true,
                     autoplay: true,
                 }
@@ -101,4 +104,3 @@ function setActiveAnchor() {
         }
     });
 }
-
