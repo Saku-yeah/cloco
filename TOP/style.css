@@ -28,12 +28,13 @@ a:hover {
 .box {
   width: 70%;
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 40px;
   border-radius: 20px; /* 枠線を見やすくするため */
   display: flex;
   background-color: #ffffff;
   color: #000000;
+  opacity: 0.95;
 }
 .button-wrapper {
     text-align: center; /* ★追加: インライン要素を中央寄せする */
@@ -55,6 +56,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
+  height: 80px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background: #000000;
@@ -103,12 +105,30 @@ header .pconly ul li a.current{
 /* ---FV用--- */
 #fv{
   margin-top: 80px;
-}
-#fv h1{
   position: relative;
   display: inline-block;
 }
-#fv h1 .fvcta{
+.visually-hidden {
+  position: fixed !important;
+  /* keep it on viewport */
+  top: 0px !important;
+  left: 0px !important;
+  /* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
+     before allowing buttons to be activated. */
+  width: 4px !important;
+  height: 4px !important;
+  /* visually hide it with overflow and opacity */
+  opacity: 0 !important;
+  overflow: hidden !important;
+  /* remove any margin or padding */
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  /* ensure no other style sets display to none */
+  display: block !important;
+  visibility: visible !important;
+}
+#fv .fvcta{
   position: fixed;
   right: 10%;
   bottom: 0%;
@@ -185,8 +205,15 @@ header .pconly ul li a.current{
 }
 .rotate-btn:hover img{
     animation-play-state: paused; /* アニメーションを一時停止 */
+    animation: syoumen-y infinite;
 }
-#fv h1 .logo{
+@keyframes syoumen-y {
+  0% {
+    transform: rotateY(0deg);
+
+  }
+}
+#fv .logo{
   position: absolute;
   left: 14%;
   bottom: 20%;
@@ -200,7 +227,7 @@ section.normal{
 }
 section .section-title img {
   display: block;
-  width: 250px;
+  width: 350px;
   margin: 50px auto 50px;
 }
 section.normal h2{
@@ -293,9 +320,8 @@ section .inner{
     position: absolute; /* 必須: 位置指定を有効化 */
     top: 0;
     bottom: 0; /* height: 100% の代わりに top: 0; bottom: 0; を使用 */
-    width: 350px; /* グラデーションの幅（pxで指定） */
-    opacity: 0.2;
-    background:  radial-gradient(at 100% 50%,  #000000,#909090);
+    width: 20%; /* グラデーションの幅（pxで指定） */
+    background:linear-gradient(to right, #090909 0%, transparent 100%);   
     z-index: 15; /* スライダー上の要素（slick-center: z-index: 10）より前面にする */
     pointer-events: none; /* グラデーションがクリックを妨げないようにする */
 }
@@ -305,10 +331,8 @@ section .inner{
     top: 0;
     bottom: 0; /* height: 100% の代わりに top: 0; bottom: 0; を使用 */
     right: 0;
-    width: 350px; /* グラデーションの幅（pxで指定） */
-    opacity: 0.2;
-    background:  radial-gradient(at 0% 50%, #909090, #000000);
-    z-index: 15; /* スinear-gradient(90deg, #fff,#000);ライダー上の要素（slick-center: z-index: 10）より前面にする */
+    width: 20%; /* グラデーションの幅（pxで指定） */
+    background:linear-gradient(to left, #090909 0%, transparent 100%);    z-index: 15; /* スinear-gradient(90deg, #fff,#000);ライダー上の要素（slick-center: z-index: 10）より前面にする */
     pointer-events: none; /* グラデーションがクリックを妨げないようにする */
 }
 #schedule .schedule-slider .slick-center {
@@ -360,30 +384,41 @@ section .inner{
   margin: 0 auto;
 }
 #report .box .left h3 {
-  font-size: 18px;
+  font-size: 30px;
   margin: 10px;
+  text-align: center;
 }
 #report .content-body {
   width: 35%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
-
+#report .content-body h4{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#report .content-body h4 span{
+    text-decoration: none;
+    position: relative;
+    padding-left: 70px;
+    color: #909090;
+    font-size: 15px;
+}
 
 /* --- news用 --- */
 #news{
   background-image: url('./img/pc/アセット 12@3x.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% auto;
-  padding: 40px;
+  background-size: 100% 100%;
+  padding: 70px;
 }
 #news #news-box {
-  background-color: rgb(0 0 0 / 0.5);
+  background-color: rgb(0 0 0 / 0.8);
   color: #fff;
   width: 40%;
   display: block;
   margin-left: 10%;
-  padding: 20px;
+  padding: 100px 40px;
   text-align: left;
   height: auto;
 }
@@ -393,11 +428,11 @@ section .inner{
   margin: 0 auto 20px;
 }
 #news-list .part:first-child {
-    border-top: 1px solid #fff;
+    border-top: 1px solid #ccc;
 }
 #news-list .part {
     padding: 20px 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
 #news-list .part .title {
@@ -439,8 +474,9 @@ section .inner{
   margin-top: 20px;
   border-radius: 30px;
   border: 1px solid #fff;
-  padding: 10px 0;
-  width:50%;
+  padding: 10px;
+  max-width: 50%;
+  width:auto;
   margin: 0 auto;
 }
 
@@ -459,7 +495,6 @@ section .inner{
 .card-header {
     /* PC版のヘッダー横並びをデフォルトに */
     display: flex;
-    justify-content: center;
     align-items: baseline;
     gap: 1em;
     text-align: left;
@@ -655,7 +690,7 @@ section .inner{
 footer{
   color: white;
   justify-content: center;
-  padding: 20px 0;
+  padding: 100px 0 0;
   font-family: none;
   background: url('./img/pc/アセット 17@3x.png') no-repeat center center;
   background-size: cover;
@@ -667,7 +702,7 @@ footer img{
 }
 /* リンク共通スタイル */
 footer a {
-  font-size: 20px;
+  font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -694,14 +729,38 @@ footer div a{
   margin: auto; /* リンク間の間隔 */
   white-space: nowrap; /* 折り返しを防ぐ */
 }
+
 footer p{
   text-align: center;
   font-size: 16px;
-  margin-top: 50px;
+  margin-top: 100px;
   color: #FFFFFF;
 }
 
 /* --- 個別ページ用(section) ---*/
+.breadcrumb {
+  padding: 0 .5rem;
+  background-color: #CDC8BB;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin-left: 14%;
+  padding: 0;
+  width: 100%;
+}
+.breadcrumb ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: ">";
+}
 section.detail{
   background-image: url('./img/pc/アセット 16@3x.png') !important;
   background-repeat: no-repeat !important;
@@ -721,13 +780,14 @@ section.detail{
 }
 #schedule.detail h2{
   max-width: 1200px; /* PC版での最大幅を仮定 */
-  border-bottom: 2px #fff solid;  
+  width: 80%;
+  border-bottom: 2px #ccc solid;  
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   font-size: 30px;
   color: #fff;
-  margin: 0 auto;
+  margin: 30px auto 10px;
 }
 .schedule-list .part {
     box-sizing: border-box; /* paddingやborderをwidthに含める */
@@ -737,7 +797,42 @@ section.detail{
     width: 320px;
 }
 
+.hina-mincho-regular {
+  font-family: "Hina Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+
+/*eveDetail*/
+#schedule.eveDetail .part {
+    padding: 20px;
+    margin: 100px auto;
+    width: 70%;
+}
+/*eveDetail*/
+#schedule.eveDetail .part .card-title-text{
+  font-size: 60px;
+}
+#schedule.eveDetail .part .main-area{
+  display: flex;
+  flex-direction: row;
+}
+#schedule.eveDetail .part .main-area .card-details{
+  font-size: 40px;
+  margin: 10px auto;
+}
+#schedule.eveDetail .part .text-area{
+  padding: 40px;
+}
+#schedule.eveDetail .part .text-area h4{
+  font-size: 40px;
+  border-bottom: 1px #000 solid;
+  margin: 40px auto;
+}
+#schedule.eveDetail .part .text-area .notion{
+  margin-top: 30px;
+}
 
 
 /* --- スマホ用 --- */
@@ -747,6 +842,11 @@ section.detail{
   }
   .sponly{
     display: block;
+  }
+  .box{
+    padding: 20px;
+    margin: 40px auto 10px;
+    max-width: 80%;
   }
   .btn-more-events {
     font-size: 20px;
@@ -803,7 +903,7 @@ section.detail{
     position: absolute;
     font-size: 45px;
     top: -70px;
-    right: 30px;
+    right: 32px;
     width: 40px;
     background: #000 ;
     height: 50px;
@@ -814,7 +914,6 @@ section.detail{
     padding: 10px 0;
     text-align: center;
     width: 80%;
-    margin: auto;
   }
   header .sponly .open-menu li a{
     font-family: serif;
@@ -826,13 +925,26 @@ section.detail{
   #fv{
     margin-top: 60px;
   }
-  #fv h1 .fvcta{
+.breadcrumb ul {
+  margin-left: 4%;
+  font-size: 11px;
+  width: 95%;
+}
+  #fv .fvcta{
     width: 20%;
     bottom: 10%;
   }
-  #fv h1 .fvcta .rotate-btn{
+  #fv .fvcta .rotate-btn{
     margin-top: 20px;
   }
+
+  #fv .logo{
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 50%;
+  height: auto;
+}
   section.normal{
     padding: 30px 0;
   }
@@ -846,8 +958,16 @@ section.detail{
   section.normal h3 span{
     font-size: 28px;
   }
+  section .section-title img {
+    width: 250px;
+  }
 
-
+#schedule .schedule-slider  {
+  padding: 0;
+  margin: 60px auto 0; /* 下部に余白 */
+  width: 100%;
+  position: relative;
+}
     /* カードタイトル部分 */
     #schedule .card-title {
         /* SP版では左右のパディングを狭く */
@@ -870,10 +990,10 @@ section.detail{
         content : '';
         position: absolute; /* 位置指定を有効化 */
         left: -5px; /* SP版に合わせて左の突き出し量を調整 */
-        top: 50%;
+        top: 35%;
         transform: translateY(-50%); /* 垂直中央に配置 */
-        width: 20px; /* SP版に合わせてサイズ調整 */
-        height: 20px; /* SP版に合わせてサイズ調整 */
+        width: 25px; /* SP版に合わせてサイズ調整 */
+        height: 25px; /* SP版に合わせてサイズ調整 */
         background-image: url('./img/pc/アセット 6@3x.png');
         background-size: contain;
         background-repeat: no-repeat;
@@ -883,7 +1003,7 @@ section.detail{
     #schedule .card-title-text {
         width: 100%;
         text-align: center;
-        /* NEWアイコンが左にあるため、テキストがアイコンと重ならないように調整 */
+        font-size:18px;
     }
     /* カード画像 */
     #schedule .card-image img {
@@ -911,28 +1031,38 @@ section.detail{
 
   #news{
     background-image: url('./img/sp/アセット\ 17@3x.png');
-    padding: 20px;
+    padding: 60px 0;
   }
   #news #news-box{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    padding: 20px;
   }
   #news #news-box img{
     width: 60%;
   }
   #news #news-box .title{
-    font-size: 15px;
+    font-size: 30px;
   }
-#news-list .part p span,
-#news-list .part p a {
-    font-size: 10px;
+#news-list .part p{
+    font-size: 16px;
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    align-items: flex-start;
+}
+#news-list .part p a{
+    margin-top: 30px;
+}
+#news-list .part p a::after {
+  right: -120px;
+}
+#news #news-box .more-news .title{
+  font-size: 20px;
+  white-space: nowrap;
 }
   .box{
     flex-direction: column;
-    max-width: 80%;
+    width: 90%;
   }
   .box .right{
     width: 100% !important;
@@ -976,7 +1106,16 @@ section.detail{
     /* フッター部分 */
     .card-footer {
         padding-top: 10px;
-    }  #company .center-content{
+    } 
+    .card-footer a{
+      text-decoration: none;
+      color: #000;
+    } 
+
+  #company .header-info h2 {
+    font-size: 20px;
+}
+  #company .center-content{
     flex-direction: column;
   }
 
@@ -990,9 +1129,14 @@ section.detail{
     width: 100%;
     margin: 0 auto;
   }
+  #company .under-content h3{
+    text-align: center;
+
+  }
   footer{
     background-image: url('./img/sp/アセット 15@3x.png');
-    
+    max-width: 100%;
+    padding-top: 20px;
   }
   footer img{
     width: 60%;
@@ -1001,11 +1145,59 @@ section.detail{
   footer .sponly{
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
   }
-  footer .sponly a{
+  footer div.sponly a{
     font-size: 18px;
     margin-left: 0;
   }
+  footer .sponly a:nth-child(4){
+    width: 100%;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  }
+  footer p{
+  text-align: center;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #FFFFFF;
+}
+section.detail{
+  background-image: url('./img/sp/アセット 11@3x.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center bottom !important;
+  background-size: 100% auto !important;
+  padding-bottom: 30px;
+}
+#schedule.eveDetail .part {
+    padding: 10px;          /* カード間の隙間として利用 */
+    margin: 50px auto;
+    width: 80%;
+    justify-content: center;
+}
+#schedule.eveDetail .part .card-title-text{
+  font-size: 25px;
+}
+#schedule.eveDetail .part .main-area{
+  flex-direction: column;
+}
+#schedule.eveDetail .part .main-area .card-details{
+  font-size: 20px;
+}
+#schedule.eveDetail .part .text-area{
+  padding: 10px;
+  font-size: 15px;
+}
+#schedule.eveDetail .part .text-area h4{
+  font-size: 20px;
+  border-bottom: 1px #000 solid;
+  margin: 15px auto;
+}
+#schedule.eveDetail .part .text-area .notion{
+  margin: 10px 0;
+  font-size: 12px;
+}
+
 }
