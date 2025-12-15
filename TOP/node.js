@@ -104,3 +104,52 @@ function setActiveAnchor() {
         }
     });
 }
+
+const IDLE_TIME_MS = 3000; // 10秒をミリ秒で定義
+let timeoutId;
+const banner = $("#overview"); // jQueryオブジェクトとして取得
+
+// === 1. アイドルタイマーを開始する関数 ===
+function startIdleTimer() {
+    // 既存のタイマーがあればクリアする
+    clearTimeout(timeoutId); 
+    
+    // 10秒後にバナーを表示するように設定
+    timeoutId = setTimeout(showBanner, IDLE_TIME_MS);
+    console.log("タイマーを再設定しました。");
+}
+
+// === 2. バナーを表示する関数 ===
+function showBanner() {
+    // バナーが表示されていなければ表示
+    if (banner.is(':hidden')) {
+        banner.show();
+        console.log("操作停止10秒でバナーを表示しました。");
+        // 一度表示したらタイマーは不要
+        clearTimeout(timeoutId); 
+    }
+}
+
+// === 3. ユーザー操作時にタイマーをリセットし再開する関数 ===
+function resetTimer() {
+    // バナーが表示されていなければ、タイマーをリセットし再開
+    if (banner.is(':hidden')) {
+        startIdleTimer();
+    }
+}
+
+// === 4. イベントリスナーの設定 ===
+window.onload = function() {
+    // ページロード完了後、すぐにアイドルタイマーを開始
+    startIdleTimer(); 
+
+    // ページ上の主要な操作イベントに resetTimer を紐づける
+    $(document).on('mousemove keypress scroll', resetTimer);
+
+    /* ×ボタンが押されたとき、バナーブロックを非表示 */
+    $("#overview .close").on("click", function(){
+        banner.hide();
+        // 閉じた後、すぐにタイマーを再開する（再びアイドル状態を監視）
+        startIdleTimer(); 
+    });
+};

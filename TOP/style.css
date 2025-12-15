@@ -69,7 +69,9 @@ header .pconly{
   max-width: 1800px;
   padding-top: 10px;
 }
-
+header .pconly .logo{
+  display: inline;
+}
 header .pconly .logo img{
   max-width: 50%;
 }
@@ -100,6 +102,47 @@ header .pconly ul li a.current{
   -webkit-background-clip: text; 
   background-clip: text; 
   background-repeat: no-repeat;
+}
+
+#overview {
+  width: 100%;       /* 幅いっぱい */
+  height: 100vh;     /* 高さいっぱい */
+  background: rgba(0, 0, 0, 0.5); /* 背景を薄暗くする */
+  display: none;     /* デフォルトは非表示 */
+  position: fixed;   /* 表示位置を絶対指定して固定 */
+  top: 0;            /* 表示位置を上から0pxに指定 */
+  left: 0;           /* 表示位置を左から0pxに指定 */
+  z-index: 1000;
+}
+#overview .bnr {
+  position: absolute; /* 相対位置とする、かつcloseの基準値になる。 */
+  top: 50%;           /* 表示位置を上から50%に指定 */
+  left: 50%;          /* 表示位置を左から50%に指定 */
+  transform: translate(-50%, -50%); /* 上下中央にするため要素の半分分だけ左上に戻す */
+  background: #000;
+  color:  gold;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  font-size: 20px;
+}
+#overview .bnr .card-title-text {
+  font-size: 30px ;
+}
+#overview .bnr .card-details span {
+  font-size: 25px;
+  color: #a00;
+}
+#overview .bnr .close {
+  font-weight: bold;  /* 太字にする */
+  padding: 0 6px;     /* 左右の余白を適当に調整 */
+  background: #fff;   /* 背景色を白に指定 */
+  position: absolute; /* 相対位置とする */
+  top: -20px;         /* いい感じの位置に指定 */
+  right: 0px;         /* 同様 */
+  cursor: pointer;    /* hover時にカーソルを指の形にする */
+  z-index: 1000;
+  color: #000;
 }
 
 /* ---FV用--- */
@@ -479,7 +522,10 @@ section .inner{
   width:auto;
   margin: 0 auto;
 }
-
+#news .more-news a {
+  text-decoration: none;
+  color: #fff;
+}
 
 /* --- benefit用 --- */
 #benefit{
@@ -581,7 +627,7 @@ section .inner{
 #company .box {
   flex-direction: column;
 }
-#company .header-info h2 {
+#company .header-info h3 {
     font-size: 24px;
     margin-bottom: 5px;
 }
@@ -614,7 +660,7 @@ section .inner{
     margin: 20px;
 }
 
-#company h3 {
+#company h4 {
     border-bottom: #000 1px solid;
     font-size: 20px;
     text-align: left;
@@ -717,7 +763,7 @@ footer div{
   display: flex;
   justify-content: center; /* リンクを中央に配置 */
   max-width: 80%;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   margin: auto;
 }
 .top,.bottom{
@@ -725,7 +771,7 @@ footer div{
 }
 footer div a{
   font-size: 25px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 30px;
   margin: auto; /* リンク間の間隔 */
   white-space: nowrap; /* 折り返しを防ぐ */
 }
@@ -766,6 +812,8 @@ section.detail{
   background-repeat: no-repeat !important;
   background-position: center bottom !important;
   background-size: 100% auto !important;
+  padding-bottom: 100px;
+
 }
 /* --- eveSche用 ---*/
 
@@ -774,7 +822,6 @@ section.detail{
     flex-wrap: wrap;
     justify-content: left;
     list-style: none;
-    padding: 0;
     margin: 0 auto;
     max-width: 1200px; /* PC版での最大幅を仮定 */
 }
@@ -785,15 +832,15 @@ section.detail{
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
-  margin: 30px auto 10px;
+  margin: 50px auto 20px;
 }
 .schedule-list .part {
     box-sizing: border-box; /* paddingやborderをwidthに含める */
     padding: 10px;          /* カード間の隙間として利用 */
     margin-bottom: 20px;    /* 行間のスペース */
-    margin: 0 auto;
+    margin: 30px auto;
     width: 320px;
 }
 
@@ -812,14 +859,14 @@ section.detail{
 }
 /*eveDetail*/
 #schedule.eveDetail .part .card-title-text{
-  font-size: 60px;
+  font-size: 40px;
 }
 #schedule.eveDetail .part .main-area{
   display: flex;
   flex-direction: row;
 }
 #schedule.eveDetail .part .main-area .card-details{
-  font-size: 40px;
+  font-size: 30px;
   margin: 10px auto;
 }
 #schedule.eveDetail .part .text-area{
@@ -851,6 +898,17 @@ section.detail{
   .btn-more-events {
     font-size: 20px;
   }
+#overview .bnr {
+  width: 80%;
+  font-size: 10px;
+}
+
+  #overview .bnr .card-title-text {
+  font-size: 15px ;
+}
+#overview .bnr span {
+  font-size:10px;
+}
   header{
     height: 60px;
   }
@@ -932,7 +990,8 @@ section.detail{
 }
   #fv .fvcta{
     width: 20%;
-    bottom: 10%;
+    bottom: 2%;
+    right: 2%;
   }
   #fv .fvcta .rotate-btn{
     margin-top: 20px;
@@ -989,7 +1048,7 @@ section.detail{
     #schedule .new ::before {
         content : '';
         position: absolute; /* 位置指定を有効化 */
-        left: -5px; /* SP版に合わせて左の突き出し量を調整 */
+        left: -10px; /* SP版に合わせて左の突き出し量を調整 */
         top: 35%;
         transform: translateY(-50%); /* 垂直中央に配置 */
         width: 25px; /* SP版に合わせてサイズ調整 */
@@ -1003,7 +1062,7 @@ section.detail{
     #schedule .card-title-text {
         width: 100%;
         text-align: center;
-        font-size:18px;
+        font-size:16px;
     }
     /* カード画像 */
     #schedule .card-image img {
@@ -1028,7 +1087,9 @@ section.detail{
         right: 5px; /* SP版で右寄せを調整 */
     }
 
-
+#report .box .left h3 {
+    font-size: 22px;
+}
   #news{
     background-image: url('./img/sp/アセット\ 17@3x.png');
     padding: 60px 0;
@@ -1054,11 +1115,14 @@ section.detail{
     margin-top: 30px;
 }
 #news-list .part p a::after {
-  right: -120px;
+  right: -30px;
 }
 #news #news-box .more-news .title{
   font-size: 20px;
   white-space: nowrap;
+}
+#news .more-news a {
+  font-size: 15px;
 }
   .box{
     flex-direction: column;
@@ -1112,7 +1176,7 @@ section.detail{
       color: #000;
     } 
 
-  #company .header-info h2 {
+  #company .header-info h3 {
     font-size: 20px;
 }
   #company .center-content{
@@ -1129,7 +1193,7 @@ section.detail{
     width: 100%;
     margin: 0 auto;
   }
-  #company .under-content h3{
+  #company .under-content h4{
     text-align: center;
 
   }
@@ -1152,6 +1216,7 @@ section.detail{
   footer div.sponly a{
     font-size: 18px;
     margin-left: 0;
+    padding: 10px 0;
   }
   footer .sponly a:nth-child(4){
     width: 100%;
